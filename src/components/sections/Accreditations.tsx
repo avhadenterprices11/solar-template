@@ -52,7 +52,7 @@ export function Accreditations() {
               
               <div className="space-y-4">
                 <h2 className="text-5xl md:text-6xl font-black text-brand-navy leading-[1.05] italic tracking-tighter">
-                  A Foundation <br/> Of <span className="text-brand-green underline decoration-brand-gray underline-offset-8">Trust.</span>
+                  A Foundation <br/> Of <span className="text-brand-green 8">Trust.</span>
                 </h2>
                 <p className="text-brand-gray0 font-medium text-lg leading-relaxed max-w-sm">
                   G&D Brothers operates within a rigorous framework of national certifications and safety protocols.

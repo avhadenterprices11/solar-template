@@ -40,7 +40,7 @@ export function AboutTrust() {
               <h2 className="text-sm font-black text-brand-green uppercase tracking-[0.4em]">Quality Assurance</h2>
             </div>
             <h3 className="text-6xl md:text-8xl font-black text-brand-navy italic tracking-tighter leading-[0.9]">
-              Built on <br/> <span className="text-brand-green underline decoration-brand-gray underline-offset-[16px]">Integrity.</span>
+              Built on <br/> <span className="text-brand-green [16px]">Integrity.</span>
             </h3>
           </div>
           <div className="max-w-md">

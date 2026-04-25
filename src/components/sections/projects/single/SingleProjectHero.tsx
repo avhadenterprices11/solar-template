@@ -11,7 +11,7 @@ interface SingleProjectHeroProps {
 
 export function SingleProjectHero({ title, type, image, category }: SingleProjectHeroProps) {
   return (
-    <section className="relative h-[70vh] flex items-end pb-24 overflow-hidden">
+    <section className="relative h-[60vh] flex items-end pb-12 overflow-hidden">
       {/* Background with Adaptive Overlays */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -35,7 +35,7 @@ export function SingleProjectHero({ title, type, image, category }: SingleProjec
             {type}
           </div>
           
-          <h1 className="text-5xl md:text-8xl font-black text-white leading-tight italic tracking-tighter animate-in fade-in slide-in-from-top-4 duration-700">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight italic tracking-tighter animate-in fade-in slide-in-from-top-4 duration-700">
             {title}
           </h1>
 

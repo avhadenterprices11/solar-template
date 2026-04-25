@@ -17,7 +17,7 @@ export function ContactCTA() {
           </div>
           
           <h2 className="text-5xl md:text-8xl font-black text-brand-navy italic tracking-tighter leading-[0.9]">
-            Let&apos;s Discuss Your <br/> <span className="text-brand-green underline decoration-brand-gray underline-offset-[16px]">Project.</span>
+            Let&apos;s Discuss Your <br/> <span className="text-brand-green [16px]">Project.</span>
           </h2>
           
           <p className="text-xl md:text-2xl text-brand-gray0 font-bold max-w-2xl mx-auto leading-tight italic">

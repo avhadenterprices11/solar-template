@@ -27,9 +27,9 @@ export const projects: Project[] = [
     title: "MSKVY 1.0 & 2.0",
     category: "government",
     type: "Solar & Transmission Infrastructure",
-    description: "Large-scale solar integration and transmission line execution under a government-led renewable energy initiative.",
+    description: "Large-scale solar integration and transmission infrastructure under a government renewable energy initiative.",
     image: "/images/solar-project-site.png",
-    overview: "The MSKVY 1.0 & 2.0 project (Mukhyamantri Saur Krushi Vahini Yojna) focused on enabling large-scale solar power integration through the development of transmission infrastructure and substation connectivity. G&D Brothers played a dual role as a Transmission Line Contractor and Liaisoning Consultant, ensuring seamless execution, regulatory coordination, and system integration across Nashik, Sinnar, Malegaon, and Dindori.",
+    overview: "The MSKVY project focused on large-scale solar integration through advanced transmission infrastructure. G&D Brothers served as a Transmission Contractor and Liaisoning Consultant, ensuring seamless execution across Nashik, Sinnar, and Dindori.",
     details: [
       { label: "Developer", value: "Torrent Power" },
       { label: "Location", value: "Nashik, Sinnar, Malegaon, Dindori" },
@@ -95,9 +95,9 @@ export const projects: Project[] = [
     title: "RDSS 1.0",
     category: "government",
     type: "Transmission Line & Substation Infrastructure",
-    description: "Strengthening regional power distribution through transmission line execution and substation connectivity.",
+    description: "Strengthening regional power distribution through transmission line execution.",
     image: "/images/about-hero.png",
-    overview: "The Revamped Distribution Sector Scheme 1.0 focused on strengthening power distribution infrastructure. G&D Brothers executed transmission line works and supported substation connectivity in the Nashik – Trambakeshwar and Igatpuri regions, ensuring efficient system integration and improved grid reliability.",
+    overview: "The RDSS 1.0 project strengthened regional power distribution. G&D Brothers executed transmission line works and substation connectivity in the Nashik – Trambakeshwar and Igatpuri regions.",
     details: [
       { label: "Developer", value: "Ashoka Buildcon" },
       { label: "Location", value: "Nashik – Trambakeshwar & Igatpuri" },
@@ -128,23 +128,19 @@ export const projects: Project[] = [
     siteConstraints: [
       "Execution across hilly terrain conditions",
       "Limited accessibility in low mobility areas",
-      "Logistical challenges for material and workforce movement"
+      "Logistical challenges for material movement"
     ],
     technicalChallenges: [
       "Electrical system complexity and integration",
       "Grid connectivity and synchronization",
       "Execution under strict timeline constraints",
-      "Material and supply chain coordination",
-      "Environmental and weather-related challenges",
-      "System performance optimization"
+      "Environmental and weather-related challenges"
     ],
     scaleAndComplexity: [
-      "Alignment with structured government program guidelines",
-      "Coordination across contractors, authorities, and vendors",
-      "Handling 33kV / 11kV systems",
+      "Alignment with government program guidelines",
+      "Coordination across contractors and authorities",
       "Integration with existing infrastructure",
-      "Parallel execution across multiple work fronts",
-      "Time-sensitive deployment within 18-week schedule"
+      "Parallel execution across multiple work fronts"
     ],
     compliance: [
       "Adherence to electrical safety standards and project specifications",
@@ -158,9 +154,9 @@ export const projects: Project[] = [
     title: "RDSS 2.0",
     category: "government",
     type: "Transmission, Substation & Power Development",
-    description: "Large-scale multi-location power infrastructure execution including transmission lines, substations and transformers.",
+    description: "Large-scale multi-location infrastructure execution including transmission lines and substations.",
     image: "/images/services-hero.png",
-    overview: "RDSS 2.0 (Konkan Project) represents a massive strengthening of power distribution infrastructure. We executed critical components including a 45+ km transmission network, 10 MVA transformers, and new 33/11kV Power Substations across Nashik, Ahilyanagar, Sangamner, and Shree Gonda.",
+    overview: "The RDSS 2.0 Konkan Project modernized regional distribution infrastructure. We executed a 45+ km transmission network, 10 MVA transformers, and new 33/11kV substations across multiple regions.",
     details: [
       { label: "Developer", value: "NCC" },
       { label: "Location", value: "Nashik, Ahilyanagar, Sangamner, Shree Gonda" },
@@ -189,34 +185,23 @@ export const projects: Project[] = [
       "Improved operational efficiency across Konkan region utility grid"
     ],
     siteConstraints: [
-      "Execution across multiple locations, requiring coordinated deployment",
-      "Hilly and uneven terrain, impacting alignment and installation",
-      "Low mobility areas, limiting access for equipment and transportation",
-      "Right of Way (ROW) challenges across roads, private land, and utility corridors",
-      "Presence of existing infrastructure, requiring careful integration",
-      "Parallel work fronts across geographically distributed sites",
-      "Weather-related constraints affecting execution timelines"
+      "Multi-location deployment requiring synchronized workflows",
+      "Hilly terrain impacting alignment and installation",
+      "Major Right of Way (ROW) challenges across public corridors",
+      "Parallel work fronts across distributed sites"
     ],
     technicalChallenges: [
       "Managing multi-location execution with synchronized workflows",
-      "Ensuring accurate alignment of 45+ km transmission line network",
-      "Integration of 33kV / 11kV systems across transmission, substations, and feeders",
-      "Achieving stable grid connectivity and synchronization",
-      "Installation of multiple transformers (up to 10 MVA) with precision",
-      "Maintaining system compatibility and load distribution efficiency",
-      "Coordinating parallel execution across substations and line networks",
-      "Managing execution sequencing in distributed and low-access locations",
-      "Minimizing transmission losses and optimizing system performance",
+      "Accurate alignment of 45+ km transmission network",
+      "Stable grid connectivity and synchronization",
+      "Precision installation of 10 MVA transformers",
       "Maintaining quality under strict 40-week timeline"
     ],
     scaleAndComplexity: [
       "Large-scale execution across 45+ km transmission network",
-      "Integration of transformers, substations, and feeder systems within a unified network",
+      "Integration of transformers and substation units",
       "Multi-location deployment across four major regions",
-      "Coordination across multiple technical workstreams simultaneously",
-      "Handling high-voltage 33kV / 11kV infrastructure integration",
-      "Managing parallel execution across distributed sites",
-      "Delivering within a defined 40-week timeline while maintaining quality"
+      "Handling high-voltage 33kV / 11kV infrastructure"
     ],
     compliance: [
       "Adherence to electrical safety standards and project specifications",
@@ -231,9 +216,9 @@ export const projects: Project[] = [
     title: "Smart Metering Project",
     category: "government",
     type: "Large-Scale Metering Infrastructure Upgrade",
-    description: "High-volume replacement and deployment of smart meters across multiple locations in the Nashik region.",
+    description: "High-volume smart meter deployment for modernized energy monitoring.",
     image: "/images/hero.png",
-    overview: "The Nashik Smart Meter Replacement Project modernized energy metering for 5000+ consumers. We executed distributed installations across individual premises in Nashik, Ozar, and Pimpalgaon, ensuring accurate metering and seamless integration with the modern energy monitoring grid.",
+    overview: "The Nashik Smart Meter Project modernized energy monitoring for 5000+ consumers. We executed distributed installations across individual premises in Nashik, Ozar, and Pimpalgaon.",
     details: [
       { label: "Developer", value: "NCC" },
       { label: "Location", value: "Nashik, Ozar & Pimpalgaon" },
@@ -265,32 +250,20 @@ export const projects: Project[] = [
       "Multi-location execution across Nashik region",
       "Distributed installations at individual consumer premises",
       "Limited space and accessibility at installation points",
-      "Dependency on consumer availability for site access",
-      "Presence of non-standard and legacy wiring setups",
-      "High-density areas causing logistical and scheduling challenges",
-      "Execution in live power supply environments",
-      "Weather and local conditions affecting field operations"
+      "Execution in live power supply environments"
     ],
     technicalChallenges: [
-      "Ensuring accurate installation across varied consumer setups",
-      "Handling non-standard and legacy wiring conditions",
-      "Maintaining correct phase alignment and load connections",
-      "Seamless integration with existing power supply systems",
-      "Installation in live electrical environments with safety control",
-      "Maintaining consistent quality across 5000+ distributed units",
-      "Device configuration and basic communication setup",
-      "Fault detection and rectification during installation",
-      "Ensuring data accuracy and reliability post-installation"
+      "Accurate installation across varied consumer setups",
+      "Correct phase alignment and load connections",
+      "Seamless integration with existing systems",
+      "Maintaining quality across 5000+ distributed units",
+      "Ensuring data accuracy post-installation"
     ],
     scaleAndComplexity: [
       "Execution of 5000+ smart meter installations",
-      "Multi-location deployment across Nashik, Ozar, and Pimpalgaon",
-      "Distributed execution at individual consumer premises",
-      "Handling varied environments (residential, commercial, industrial)",
-      "Managing non-uniform electrical configurations across sites",
-      "Coordinating parallel field teams for large-scale execution",
-      "Maintaining installation consistency across all units",
-      "Execution in live power environments with safety control"
+      "Multi-location deployment across three major regions",
+      "Managing non-uniform configurations across sites",
+      "Coordinating parallel field teams for large-scale delivery"
     ],
     compliance: [
       "Adherence to safety standards during live installations",

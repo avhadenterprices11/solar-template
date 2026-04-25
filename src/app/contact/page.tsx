@@ -22,21 +22,21 @@ export default function ContactPage() {
       </div>
       
       {/* Form & Actions Section */}
-      <section className="pb-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-6">
-           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24 items-start">
+           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
               <div className="lg:col-span-3 animate-in fade-in slide-in-from-left-8 duration-1000 delay-400">
                  <ContactForm />
               </div>
               
-              <div className="lg:col-span-2 space-y-16 animate-in fade-in slide-in-from-right-8 duration-1000 delay-500">
-                 <div className="space-y-8 pt-12">
+              <div className="lg:col-span-2 space-y-10 animate-in fade-in slide-in-from-right-8 duration-1000 delay-500">
+                 <div className="space-y-4 pt-6">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-px bg-brand-green" />
                       <h3 className="text-sm font-black text-brand-green uppercase tracking-[0.3em] leading-none">Consultation</h3>
                     </div>
-                    <h4 className="text-4xl font-black text-brand-navy italic tracking-tighter leading-tight">Ready for Your Next <br/> Infrastructure Scale?</h4>
-                    <p className="text-brand-gray0 font-bold leading-relaxed italic text-lg">
+                    <h4 className="text-2xl lg:text-3xl font-black text-brand-navy italic tracking-tighter leading-tight">Ready for Your Next <br/> Infrastructure Scale?</h4>
+                    <p className="text-brand-gray0 font-bold leading-tight italic text-base">
                       &quot;Whether you are scaling a government solar initiative or modernizing an industrial distribution grid, our lead engineers are available to discuss technical feasibility.&quot;
                     </p>
                  </div>

@@ -51,12 +51,12 @@ export const services: ServiceData[] = [
     slug: "electrical-contracting-epc",
     hero: {
       title: "Electrical Contracting & EPC Solutions",
-      subtext: "End-to-end electrical infrastructure solutions designed, executed, and delivered with precision, safety, and compliance.",
+      subtext: "End-to-end electrical infrastructure solutions delivered with precision, safety, and compliance.",
       image: "/images/services-hero.png"
     },
     intro: {
       heading: "Overview",
-      content: "G&D Brothers provides complete electrical EPC solutions, covering design, engineering, procurement, installation, and commissioning of power infrastructure projects. With proven expertise in high and medium voltage systems, we ensure reliable, efficient, and compliant execution across industrial and government projects."
+      content: "G&D Brothers provides complete electrical EPC solutions, covering engineering, procurement, and commissioning for high-voltage power projects with uncompromised safety."
     },
     offerings: {
       heading: "Scope of Services",
@@ -122,12 +122,12 @@ export const services: ServiceData[] = [
     slug: "solar-epc-solutions",
     hero: {
       title: "Solar EPC Solutions",
-      subtext: "End-to-end solar power solutions designed and executed for efficiency, scalability, and long-term performance.",
+      subtext: "End-to-end solar power solutions executed for maximum efficiency and long-term performance.",
       image: "/images/hero.png"
     },
     intro: {
       heading: "Overview",
-      content: "G&D Brothers delivers complete Solar EPC (Engineering, Procurement, and Construction) solutions for utility-scale, commercial, and rooftop projects. From system design and engineering to installation and commissioning, we ensure seamless execution of solar power systems that maximize energy output and operational efficiency."
+      content: "We deliver complete Solar EPC solutions for utility-scale and commercial projects, ensuring seamless execution that maximizes energy output and operational reliability."
     },
     offerings: {
       heading: "Scope of Services",
@@ -193,12 +193,12 @@ export const services: ServiceData[] = [
     slug: "manufacturing",
     hero: {
       title: "Engineering & Manufacturing Solutions",
-      subtext: "Precision-built electrical and structural components designed for durability, performance, and industry compliance.",
+      subtext: "Precision-built electrical and structural components designed for durability and performance.",
       image: "/images/about-hero.png"
     },
     intro: {
       heading: "Overview",
-      content: "G&D Brothers offers advanced manufacturing solutions supporting power infrastructure and renewable energy projects. Our focus on precision engineering, quality control, and material reliability ensures products that meet demanding operational standards. We manufacture critical components used across electrical systems, transmission networks, and solar installations."
+      content: "Our manufacturing solutions support critical power infrastructure with precision engineering and strict quality control for transmission networks and solar installations."
     },
     offerings: {
       heading: "What We Manufacture",
@@ -262,12 +262,12 @@ export const services: ServiceData[] = [
     slug: "power-consulting",
     hero: {
       title: "Power Consulting Services",
-      subtext: "Expert analysis, system design, and strategic guidance to optimize performance, efficiency, and compliance across power infrastructure.",
+      subtext: "Expert system design and analysis to optimize your power infrastructure efficiency.",
       image: "/images/services-hero.png"
     },
     intro: {
       heading: "Overview",
-      content: "G&D Brothers provides specialized power consulting services to help organizations design efficient electrical systems, optimize energy usage, and ensure regulatory compliance. Our consulting approach is rooted in technical expertise and practical execution, enabling clients to make informed decisions for reliable and cost-effective power infrastructure."
+      content: "We provide specialized power consulting to help organizations design efficient systems and optimize energy usage through technical expertise and practical execution."
     },
     offerings: {
       heading: "Scope of Services",
@@ -342,7 +342,7 @@ export const services: ServiceData[] = [
     },
     intro: {
       heading: "Overview",
-      content: "G&D Brothers provides comprehensive Operation & Maintenance (O&M) services to ensure the smooth and efficient functioning of power and solar systems. Our proactive approach focuses on performance optimization, preventive maintenance, and quick issue resolution, helping clients maximize system uptime and long-term returns."
+      content: "Our O&M services focus on performance optimization and preventive maintenance to maximize system uptime and long-term returns for your infrastructure."
     },
     offerings: {
       heading: "Scope of Services",

@@ -8,15 +8,15 @@ import { cn } from "@/lib/utils";
 
 export function AboutSnapshot() {
   return (
-    <section className="relative h-fit pb-24 flex items-center bg-white selection:bg-amber-100 overflow-hidden">
+    <section className="relative py-12 md:py-16 flex items-center bg-white selection:bg-amber-100 overflow-hidden">
       {/* Background Subtle Gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(245,158,11,0.03),transparent_70%)]" />
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Content Side - Left */}
-          <div className="space-y-12 animate-in fade-in slide-in-from-left-12 duration-1000">
+          <div className="space-y-8 animate-in fade-in slide-in-from-left-12 duration-1000">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-3">
                 <div className="w-12 h-px bg-brand-green" />
@@ -24,22 +24,22 @@ export function AboutSnapshot() {
               </div>
               
               <div className="space-y-4">
-                <h2 className="text-5xl md:text-7xl font-black text-brand-navy leading-[1.05] italic tracking-tighter">
-                  Engineering <br/> <span className="text-brand-green underline decoration-brand-gray underline-offset-8">Excellence</span> <br/> Since 2011.
+                <h2 className="text-3xl md:text-5xl font-black text-brand-navy leading-[1.05] italic tracking-tighter">
+                  Engineering <br/> <span className="text-brand-green 8">Excellence</span> <br/> Since 2011.
                 </h2>
-                <h3 className="text-xl font-bold text-slate-400 italic tracking-tight">
+                <h3 className="text-lg font-bold text-slate-400 italic tracking-tight">
                   Trusted Partner in Power & Energy Infrastructure.
                 </h3>
               </div>
             </div>
             
             <div className="space-y-8 max-w-xl">
-              <div className="space-y-6 text-slate-600 font-medium text-lg leading-relaxed">
+              <div className="space-y-4 text-slate-600 font-medium text-base leading-relaxed">
                 <p>
-                  G&D Brothers is a leading name in <span className="text-brand-navy font-bold">Electrical Contracting, Manufacturing, and Renewable Energy.</span> We deliver end-to-end turnkey projects with a strong focus on precision, safety, and timely execution.
+                  G&D Brothers is a leading name in <span className="text-brand-navy font-bold">Electrical Contracting, Manufacturing, and Renewable Energy.</span> We deliver end-to-end turnkey projects with precision and safety.
                 </p>
                 <p>
-                  With expertise in 33kV & 11kV systems, substations, and solar infrastructure, we enable reliable and future-ready power solutions across India.
+                  With expertise in 33kV & 11kV systems and solar infrastructure, we enable reliable and future-ready power solutions across India.
                 </p>
               </div>
 
@@ -63,13 +63,13 @@ export function AboutSnapshot() {
               </div>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-2">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-3 bg-brand-navy text-white px-10 py-5 rounded-2xl font-black hover:bg-brand-green hover:text-brand-navy transition-all hover:gap-5 shadow-2xl shadow-brand-navy/20 group"
+                className="inline-flex items-center gap-3 bg-brand-navy text-white px-8 py-4 rounded-2xl font-black hover:bg-brand-green hover:text-brand-navy transition-all hover:gap-5 shadow-2xl shadow-brand-navy/20 group text-xs uppercase tracking-widest"
               >
                 Know More
-                <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
@@ -90,10 +90,10 @@ export function AboutSnapshot() {
             </div>
 
             {/* Floating Stats Badge - Posh Style */}
-            <div className="absolute -bottom-10 left-10 md:bottom-12 md:-left-12 bg-white p-10 rounded-[2.5rem] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] border border-brand-gray space-y-3 animate-bounce-subtle">
+            <div className="absolute -bottom-8 left-8 md:bottom-8 md:-left-8 bg-white p-6 rounded-[2rem] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] border border-brand-gray space-y-2 animate-bounce-subtle">
                <div className="flex items-baseline gap-1">
-                 <span className="text-6xl font-black text-brand-navy italic tracking-tighter">15</span>
-                 <span className="text-3xl font-black text-brand-green tracking-tighter">+</span>
+                 <span className="text-4xl font-black text-brand-navy italic tracking-tighter">15</span>
+                 <span className="text-xl font-black text-brand-green tracking-tighter">+</span>
                </div>
                <div className="space-y-1">
                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 leading-none">Industry Status</p>
