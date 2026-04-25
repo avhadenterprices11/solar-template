@@ -11,14 +11,14 @@ interface SingleServiceHeroProps {
 
 export function SingleServiceHero({ title, subtext, image }: SingleServiceHeroProps) {
   return (
-    <section className="relative min-h-[auto] flex items-center bg-white pt-20 pb-10 md:pt-24 md:pb-12 overflow-hidden">
+    <section className="relative pt-32 md:pt-40 pb-12 bg-white overflow-hidden">
 
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           
           {/* Content Column */}
-          <div className="lg:w-1/2 space-y-6 md:space-y-8">
+          <div className="lg:w-1/2 space-y-6 md:space-y-8 pt-40 md:pt-48">
             <div className="space-y-4 md:space-y-6">
               <div className="flex items-center gap-3 animate-in fade-in slide-in-from-left-8 duration-1000">
                 <div className="w-12 h-1 bg-brand-green rounded-full" />

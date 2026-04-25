@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Menu, X, ArrowRight, ArrowUpRight } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -17,6 +18,8 @@ const navLinks = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,22 +33,22 @@ export function Navbar() {
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out flex justify-center px-4",
-        isScrolled ? "pt-4" : "pt-0"
+        isScrolled ? "pt-4" : isHomePage ? "pt-0 bg-gradient-to-b from-black/60 to-transparent" : "pt-0"
       )}
     >
       <div
         className={cn(
-          "w-full transition-all duration-500 ease-out flex items-center justify-between px-6 py-3",
+          "w-full transition-all duration-500 ease-out flex items-center justify-between px-6 py-4",
           isScrolled 
             ? "max-w-4xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/50 dark:border-slate-800/50 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)]" 
-            : "max-w-7xl bg-transparent py-6 border-transparent rounded-none"
+            : "max-w-7xl bg-transparent py-10 border-transparent rounded-none"
         )}
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <div className={cn(
             "relative transition-all duration-500 group-hover:scale-105",
-            isScrolled ? "w-32 h-10" : "w-40 h-14"
+            isScrolled ? "w-44 h-12" : "w-64 h-20"
           )}>
             <Image
               src="/images/G&D Brothers Logo.png"
@@ -70,7 +73,7 @@ export function Navbar() {
                 "text-xs uppercase tracking-widest font-black transition-all duration-300 px-4 py-2 rounded-full",
                 isScrolled 
                   ? "text-brand-gray0 dark:text-slate-400 hover:text-brand-navy dark:hover:text-white hover:bg-white dark:hover:bg-slate-900 shadow-sm shadow-transparent hover:shadow-black/5" 
-                  : "text-slate-700 dark:text-slate-200 hover:text-brand-green"
+                  : (isHomePage ? "text-white/90 hover:text-brand-green" : "text-brand-navy hover:text-brand-green")
               )}
             >
               {link.name}
