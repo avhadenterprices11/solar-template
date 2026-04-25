@@ -1,66 +1,97 @@
 import React from "react";
 import Link from "next/link";
-import { Zap, ShieldCheck, Activity, Cpu, Gauge, ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Zap, ShieldCheck, Activity, Cpu, Gauge, ArrowRight, ArrowUpRight } from "lucide-react";
 
 export function ElectricalEPC() {
   const points = [
-    { title: "33kV & 11kV Bay Feeders", icon: Zap },
-    { title: "Substation Development (PSS)", icon: Activity },
-    { title: "HT & LT Line Execution", icon: Cpu },
-    { title: "Switchgear Control Wiring", icon: ShieldCheck },
-    { title: "Transformer Augmentation (15 MVA)", icon: Gauge }
+    { title: "33kV & 11kV Bay Feeders", icon: Zap, detail: "High-voltage distribution infrastructure." },
+    { title: "Substation Development", icon: Activity, detail: "Turnkey PSS design & execution." },
+    { title: "HT & LT Line Execution", icon: Cpu, detail: "Transmission network engineering." },
+    { title: "Switchgear Control", icon: ShieldCheck, detail: "Precision wiring & automation." },
+    { title: "Transformer Augmentation", icon: Gauge, detail: "Capacity upgrades up to 15 MVA." }
   ];
 
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          {/* Visual/Icon Side */}
-          <div className="order-2 lg:order-1 relative">
-            <div className="absolute -top-12 -left-12 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
-              {points.map((item, idx) => (
-                <div 
-                  key={idx} 
-                  className={`p-8 bg-white dark:bg-slate-950 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-xl shadow-black/[0.02] group hover:border-blue-500/50 transition-all ${idx % 2 !== 0 ? 'md:translate-y-6' : ''}`}
-                >
-                  <div className="w-12 h-12 bg-blue-500/10 text-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                    <item.icon size={24} />
-                  </div>
-                  <h4 className="font-bold text-slate-800 dark:text-slate-200 leading-tight">{item.title}</h4>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Content Side */}
-          <div className="order-1 lg:order-2 space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-sm font-bold text-blue-500 uppercase tracking-[0.2em]">Infrastructure Pillar</h2>
-              <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">
-                Electrical EPC Solutions
+    <section id="electrical" className="py-32 bg-white overflow-hidden relative">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-20 lg:gap-32">
+          
+          {/* Header & Content Column */}
+          <div className="lg:w-5/12 space-y-12">
+            <div className="space-y-6">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-1 bg-brand-green rounded-full" />
+                <h2 className="text-sm font-black text-brand-green uppercase tracking-[0.4em]">Core Engineering</h2>
+              </div>
+              <h3 className="text-6xl md:text-8xl font-black text-brand-navy italic tracking-tighter leading-[0.9]">
+                Electrical <br/> <span className="text-brand-green underline decoration-brand-gray underline-offset-[16px]">EPC.</span>
               </h3>
             </div>
-            <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-medium">
-              We deliver complete electrical infrastructure solutions, managing everything from design and engineering to installation and commissioning.
-            </p>
-            
-            <div className="flex flex-col gap-6">
-              <div className="p-6 bg-blue-500 text-white rounded-2xl shadow-xl shadow-blue-500/20">
-                <p className="text-sm font-bold uppercase tracking-widest mb-1 opacity-80">The G&D Standard</p>
-                <p className="font-bold text-lg leading-snug">
-                  End-to-end execution with strict adherence to safety and regulatory standards.
+
+            <div className="space-y-8">
+              <p className="text-xl text-brand-gray0 font-bold leading-tight italic">
+                &quot;Delivering end-to-end power infrastructure solutions, from strategic engineering design to final project commissioning.&quot;
+              </p>
+              
+              <div className="p-8 bg-brand-gray rounded-[2.5rem] border border-brand-gray space-y-4">
+                <p className="text-[10px] font-black text-brand-green uppercase tracking-widest">The G&D Standard</p>
+                <p className="text-brand-navy font-bold leading-relaxed italic text-lg">
+                  We maintain a perfect safety record across utility-scale projects, adhering to strict international grid standards and regulatory compliance.
                 </p>
               </div>
-              
+
               <Link 
                 href="/services/electrical-contracting-epc"
-                className="inline-flex items-center gap-2 text-blue-500 font-black uppercase tracking-widest text-sm hover:gap-4 transition-all"
+                className="inline-flex items-center gap-4 text-brand-navy font-black uppercase tracking-[0.3em] text-xs hover:gap-6 transition-all group"
               >
-                Deep-Dive into Electrical EPC <ArrowRight size={18} />
+                Explore Specifications <ArrowRight size={24} className="text-brand-green group-hover:translate-x-2 transition-transform duration-500" />
               </Link>
             </div>
           </div>
+
+          {/* Points Grid Column */}
+          <div className="lg:w-7/12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            {points.map((item, idx) => (
+              <div 
+                key={idx} 
+                className={cn(
+                  "group relative p-12 bg-brand-navy rounded-[4rem] overflow-hidden border border-white/5 transition-all duration-700 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.4)]",
+                  idx % 2 !== 0 ? 'md:mt-20' : ''
+                )}
+              >
+                {/* Decorative Gradient Overlay */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_100%_0%,rgba(103,191,71,0.05),transparent_50%)]" />
+
+                <div className="relative z-10 space-y-16">
+                   <div className="flex justify-between items-start">
+                      <div className="w-16 h-16 bg-white/5 text-brand-green rounded-2xl flex items-center justify-center group-hover:bg-brand-green group-hover:text-brand-navy transition-all duration-500 shadow-2xl shadow-black/20 group-hover:-rotate-6">
+                         <item.icon size={32} />
+                      </div>
+                      <ArrowUpRight size={24} className="text-white/10 group-hover:text-brand-green transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
+                   </div>
+                   
+                   <div className="space-y-6">
+                      <div className="space-y-3">
+                        <div className="w-8 h-1 bg-brand-green rounded-full group-hover:w-16 transition-all duration-700" />
+                        <h4 className="text-3xl font-black text-white leading-[1.1] italic tracking-tighter group-hover:text-brand-green transition-colors duration-500">
+                          {item.title}
+                        </h4>
+                      </div>
+                      <p className="text-slate-400 font-bold leading-relaxed italic text-sm group-hover:text-slate-300 transition-colors">
+                        &quot;{item.detail}&quot;
+                      </p>
+                   </div>
+                   
+                   <div className="flex items-center gap-4 pt-4 border-t border-white/5">
+                      <div className="w-2 h-2 rounded-full bg-brand-green animate-pulse" />
+                      <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 group-hover:text-brand-green transition-colors">Technical Pillar 0{idx + 1}</span>
+                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>

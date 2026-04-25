@@ -1,78 +1,113 @@
 import React from "react";
-import { UserCheck, Shield, Zap, Settings, HardHat, Pickaxe } from "lucide-react";
+import { UserCheck, Shield, Settings, HardHat, Pickaxe, ArrowUpRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export function OurTeam() {
   const roles = [
     {
       title: "Project & Plant Managers",
-      desc: "Planning, execution, and dedicated client coordination.",
+      desc: "Strategic planning and dedicated client coordination for multi-site project delivery.",
       icon: UserCheck
     },
     {
       title: "Quality Engineers",
-      desc: "Civil, Mechanical & Electrical quality assurance professionals.",
+      desc: "Civil, Mechanical & Electrical QA professionals maintaining Tier-1 standards.",
       icon: Shield
     },
     {
       title: "O&M Specialists",
-      desc: "Experts in testing, commissioning, and long-term maintenance.",
+      desc: "Experts in system testing, commissioning, and long-term asset optimization.",
       icon: Settings
     },
     {
       title: "Safety Supervisors",
-      desc: "Ensuring zero-harm on-site through rigorous compliance.",
+      desc: "Ensuring zero-harm on-site through rigorous compliance and EHS protocols.",
       icon: HardHat
     },
     {
       title: "Skilled Workforce",
-      desc: "Certified electricians, fitters, welders, and technical staff.",
+      desc: "Certified electricians, fitters, and welders executing precision engineering.",
       icon: Pickaxe
     }
   ];
 
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-end justify-between gap-8 mb-16">
-          <div className="max-w-2xl space-y-4">
-            <h2 className="text-sm font-bold text-amber-500 uppercase tracking-[0.2em]">Our Workforce</h2>
-            <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
-              The Engine of <span className="text-amber-500">Excellence.</span>
+    <section className="py-24 lg:py-40 bg-white selection:bg-brand-gray overflow-hidden relative">
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Editorial Header */}
+        <div className="flex flex-col lg:flex-row items-end justify-between gap-12 lg:gap-32 mb-20 lg:mb-32">
+          <div className="max-w-2xl space-y-8">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-1 bg-brand-green rounded-full" />
+              <h2 className="text-sm font-black text-brand-green uppercase tracking-[0.4em]">Our Workforce</h2>
+            </div>
+            <h3 className="text-6xl md:text-8xl font-black text-brand-navy italic tracking-tighter leading-[0.9]">
+              The Engine of <br/> <span className="text-brand-green underline decoration-brand-gray underline-offset-[16px]">Excellence.</span>
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-              Our strength lies in a well-structured team of experienced professionals and a skilled workforce dedicated to delivering high-quality results across every project site.
+          </div>
+          <div className="max-w-md">
+            <p className="text-xl text-brand-gray0 font-bold leading-tight italic border-l-4 border-brand-green pl-8 py-2">
+              &quot;Our strength lies in a well-structured team of professionals dedicated to high-quality results.&quot;
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Workforce Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {roles.map((role, index) => (
             <div 
               key={index}
-              className="p-8 rounded-3xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 hover:border-amber-500/50 transition-all hover:shadow-xl group"
+              className="group relative p-10 lg:p-14 rounded-[3.5rem] bg-brand-navy border border-white/5 transition-all duration-700 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.4)] overflow-hidden"
             >
-              <div className="space-y-6">
-                <div className="w-14 h-14 bg-slate-50 dark:bg-slate-900 rounded-2xl flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
-                  <role.icon size={28} />
+              {/* Background Glass Ornament */}
+              <div className="absolute top-0 right-0 w-48 h-48 bg-brand-green/10 blur-[80px] pointer-events-none" />
+              
+              <div className="relative z-10 space-y-12">
+                <div className="flex justify-between items-start">
+                  <div className="w-16 h-16 bg-white/5 backdrop-blur-md rounded-2xl flex items-center justify-center text-brand-green border border-white/10 group-hover:bg-brand-green group-hover:text-brand-navy transition-all duration-500 shadow-2xl group-hover:-rotate-6">
+                    <role.icon size={28} />
+                  </div>
+                  <ArrowUpRight size={24} className="text-white/10 group-hover:text-brand-green transition-all" />
                 </div>
-                <div className="space-y-2">
-                  <h4 className="text-xl font-black text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">
-                    {role.title}
-                  </h4>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
-                    {role.desc}
+
+                <div className="space-y-4">
+                  <div className="space-y-1">
+                    <p className="text-[9px] font-black text-brand-green uppercase tracking-[0.4em]">Unit Division 0{index + 1}</p>
+                    <h4 className="text-2xl lg:text-3xl font-black text-white italic tracking-tighter leading-none group-hover:text-brand-green transition-colors">
+                      {role.title}
+                    </h4>
+                  </div>
+                  <p className="text-slate-400 leading-relaxed font-bold italic text-sm group-hover:text-slate-300 transition-colors">
+                    &quot;{role.desc}&quot;
                   </p>
                 </div>
+              </div>
+
+              {/* Decorative Watermark */}
+              <div className="absolute -bottom-6 -right-6 text-white opacity-[0.02] group-hover:opacity-[0.06] transition-opacity duration-700">
+                <role.icon size={120} />
               </div>
             </div>
           ))}
           
-          {/* Dynamic Join Block */}
-          <div className="p-8 rounded-3xl bg-amber-500 flex flex-col justify-center items-center text-center space-y-4">
-            <p className="text-slate-950 font-black text-2xl">Join the <br/>Energy Revolution</p>
-            <button className="px-6 py-2 bg-slate-950 text-white rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors">
-              Careers at G&D
-            </button>
+          {/* Dynamic Careers Card */}
+          <div className="relative p-10 lg:p-14 rounded-[3.5rem] bg-brand-green flex flex-col justify-between items-start overflow-hidden group transition-all duration-700 hover:shadow-[0_40px_80px_-20px_rgba(103,191,71,0.3)]">
+            <div className="relative z-10 space-y-4">
+               <div className="w-12 h-1 bg-brand-navy/20 rounded-full" />
+               <p className="text-brand-navy font-black text-3xl lg:text-4xl italic tracking-tighter leading-none">
+                 Join the <br/>Energy <br/>Revolution.
+               </p>
+            </div>
+            
+            <div className="relative z-10 w-full pt-12">
+              <button className="w-full flex items-center justify-between px-8 py-5 bg-brand-navy text-white rounded-2xl text-[10px] font-black uppercase tracking-widest hover:gap-8 transition-all duration-500 group">
+                Careers at G&D
+                <ArrowUpRight size={18} className="group-hover:rotate-45 transition-transform" />
+              </button>
+            </div>
+
+            {/* Decorative Pulse */}
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-navy opacity-[0.05] rounded-full blur-3xl animate-pulse" />
           </div>
         </div>
       </div>

@@ -13,23 +13,23 @@ export function ProjectStrengths() {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-slate-950">
+    <section className="py-24 bg-white dark:bg-brand-navy">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-20 items-center">
           <div className="lg:w-1/3 space-y-6 text-center lg:text-left">
-            <h2 className="text-sm font-bold text-amber-500 uppercase tracking-[0.2em]">Execution DNA</h2>
+            <h2 className="text-sm font-bold text-brand-green uppercase tracking-[0.2em]">Execution DNA</h2>
             <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
               Our Execution Strength
             </h3>
-            <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
+            <p className="text-brand-gray0 dark:text-slate-400 font-medium leading-relaxed">
                We combine scaled government experience with private sector agility to deliver uncompromised infrastructure.
             </p>
           </div>
 
           <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
             {strengthIcons.map((strength, index) => (
-              <div key={index} className="flex gap-6 items-start p-8 bg-slate-50 dark:bg-slate-900 rounded-[2rem] border border-slate-100 dark:border-slate-800 group hover:border-amber-500/30 transition-all">
-                 <div className="p-4 bg-white dark:bg-slate-950 text-amber-500 rounded-2xl shadow-sm group-hover:scale-110 transition-transform">
+              <div key={index} className="flex gap-6 items-start p-8 bg-brand-gray dark:bg-slate-900 rounded-[2rem] border border-brand-gray dark:border-slate-800 group hover:border-brand-green/30 transition-all">
+                 <div className="p-4 bg-white dark:bg-brand-navy text-brand-green rounded-2xl shadow-sm group-hover:scale-110 transition-transform">
                     <strength.icon size={28} />
                  </div>
                  <p className="text-lg font-bold text-slate-800 dark:text-slate-200 leading-snug tracking-tight">

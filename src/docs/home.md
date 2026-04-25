@@ -79,7 +79,6 @@ We are actively involved in large-scale government and private sector projects a
 Project List:
 MSKVY 1.0 & 2.0 – Solar Power Projects
 RDSS 1.0 & 2.0 – Distribution Infrastructure
-KUSUM Yojana – Solar & Farmer-Centric Projects
 Private Industrial Projects
 
 🔹 8. ACCREDITATIONS & COMPLIANCE

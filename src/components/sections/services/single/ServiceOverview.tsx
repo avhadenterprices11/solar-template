@@ -7,15 +7,18 @@ interface ServiceOverviewProps {
 
 export function ServiceOverview({ heading, content }: ServiceOverviewProps) {
   return (
-    <section className="py-24 bg-white dark:bg-slate-950">
+    <section className="py-32 bg-white">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
-          <div className="lg:w-1/3 border-l-4 border-amber-500 pl-8 space-y-4">
-             <h2 className="text-sm font-black text-amber-500 uppercase tracking-widest leading-none">Perspective</h2>
-             <h3 className="text-4xl font-black text-slate-900 dark:text-white leading-tight">{heading}</h3>
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-start">
+          <div className="lg:w-5/12 space-y-6">
+             <div className="flex items-center gap-3">
+               <div className="w-10 h-1 bg-brand-green rounded-full" />
+               <h2 className="text-sm font-black text-brand-green uppercase tracking-[0.4em]">Perspective</h2>
+             </div>
+             <h3 className="text-5xl md:text-6xl font-black text-brand-navy italic tracking-tighter leading-none">{heading}</h3>
           </div>
-          <div className="lg:w-2/3">
-             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed italic">
+          <div className="lg:w-7/12">
+             <p className="text-2xl md:text-3xl text-brand-gray0 font-bold leading-tight italic border-l-8 border-brand-gray pl-10">
                &quot;{content}&quot;
              </p>
           </div>

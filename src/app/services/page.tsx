@@ -1,11 +1,8 @@
 import { Metadata } from "next";
+import { services } from "@/data/services";
 import { ServicesHero } from "@/components/sections/services/ServicesHero";
 import { WhatWeDo } from "@/components/sections/services/WhatWeDo";
-import { ElectricalEPC } from "@/components/sections/services/ElectricalEPC";
-import { SolarSolutions } from "@/components/sections/services/SolarSolutions";
-import { Manufacturing } from "@/components/sections/services/Manufacturing";
-import { Consultancy } from "@/components/sections/services/Consultancy";
-import { Maintenance } from "@/components/sections/services/Maintenance";
+import { ServiceSection } from "@/components/sections/services/ServiceSection";
 import { ExecutionApproach } from "@/components/sections/services/ExecutionApproach";
 import { ServicesWhy } from "@/components/sections/services/ServicesWhy";
 import { ServicesCTA } from "@/components/sections/services/ServicesCTA";
@@ -20,11 +17,18 @@ export default function ServicesPage() {
     <div className="flex flex-col">
       <ServicesHero />
       <WhatWeDo />
-      <ElectricalEPC />
-      <SolarSolutions />
-      <Manufacturing />
-      <Consultancy />
-      <Maintenance />
+      
+      {/* Unified Dynamic Service Sections */}
+      <div className="flex flex-col">
+        {services.map((service, idx) => (
+          <ServiceSection 
+            key={service.slug} 
+            data={service} 
+            index={idx} 
+          />
+        ))}
+      </div>
+
       <ExecutionApproach />
       <ServicesWhy />
       <ServicesCTA />

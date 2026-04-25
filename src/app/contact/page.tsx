@@ -14,26 +14,30 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="flex flex-col min-h-screen bg-white dark:bg-slate-950 overflow-hidden">
+    <main className="flex flex-col min-h-screen bg-white overflow-hidden">
       <ContactHero />
-      <div className="animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+      
+      <div className="animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
         <ContactOptions />
       </div>
       
       {/* Form & Actions Section */}
-      <section className="pb-24">
+      <section className="pb-32">
         <div className="container mx-auto px-6">
-           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
-              <div className="lg:col-span-3 animate-in fade-in slide-in-from-left-8 duration-700 delay-400">
+           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24 items-start">
+              <div className="lg:col-span-3 animate-in fade-in slide-in-from-left-8 duration-1000 delay-400">
                  <ContactForm />
               </div>
               
-              <div className="lg:col-span-2 space-y-12 animate-in fade-in slide-in-from-right-8 duration-700 delay-500">
-                 <div className="space-y-6 pt-12">
-                    <h3 className="text-sm font-black text-amber-500 uppercase tracking-widest leading-none">Consultation</h3>
-                    <h4 className="text-3xl font-black text-slate-900 dark:text-white italic tracking-tighter">Ready for Your Next Infrastructure Scale?</h4>
-                    <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-                      Whether you are scaling a government solar initiative or modernizing an industrial distribution grid, our lead engineers are available to discuss technical feasibility and execution roadmaps.
+              <div className="lg:col-span-2 space-y-16 animate-in fade-in slide-in-from-right-8 duration-1000 delay-500">
+                 <div className="space-y-8 pt-12">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-px bg-brand-green" />
+                      <h3 className="text-sm font-black text-brand-green uppercase tracking-[0.3em] leading-none">Consultation</h3>
+                    </div>
+                    <h4 className="text-4xl font-black text-brand-navy italic tracking-tighter leading-tight">Ready for Your Next <br/> Infrastructure Scale?</h4>
+                    <p className="text-brand-gray0 font-bold leading-relaxed italic text-lg">
+                      &quot;Whether you are scaling a government solar initiative or modernizing an industrial distribution grid, our lead engineers are available to discuss technical feasibility.&quot;
                     </p>
                  </div>
                  
@@ -43,7 +47,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <div className="border-t border-slate-100 dark:border-slate-800 animate-in fade-in duration-1000 delay-600">
+      <div className="animate-in fade-in duration-1000 delay-600">
         <WhyWorkWithUs />
       </div>
 

@@ -13,13 +13,13 @@ export function ProjectHero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-brand-navy/80 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-500 text-[10px] font-black uppercase tracking-widest animate-in fade-in slide-in-from-left-4 duration-700">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-green/10 border border-brand-green/20 rounded-full text-brand-green text-[10px] font-black uppercase tracking-widest animate-in fade-in slide-in-from-left-4 duration-700">
             Portfolio of Excellence
           </div>
           

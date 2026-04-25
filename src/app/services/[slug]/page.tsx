@@ -58,7 +58,7 @@ export default async function SingleServicePage({ params }: Props) {
       />
       <ServiceScope 
         heading={service.offerings.heading}
-        points={service.offerings.points}
+        items={service.offerings.items}
       />
       <ServiceCapabilities 
         heading={service.capabilities.heading}

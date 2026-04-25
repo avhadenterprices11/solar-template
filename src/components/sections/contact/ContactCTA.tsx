@@ -4,26 +4,33 @@ import { ArrowRight } from "lucide-react";
 
 export function ContactCTA() {
   return (
-    <section className="py-24 bg-slate-900 overflow-hidden relative">
-      {/* Background Orbs */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-500/5 blur-[80px] rounded-full -translate-x-1/2 translate-y-1/2" />
+    <section className="py-32 bg-white overflow-hidden relative">
+      {/* Background Accent */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.03)_0,transparent_70%)]" />
       
       <div className="container mx-auto px-6 relative z-10 text-center">
-        <div className="max-w-3xl mx-auto space-y-8">
-          <h2 className="text-4xl md:text-6xl font-black text-white italic tracking-tighter leading-tight">
-            Let’s Discuss Your <span className="text-amber-500">Project.</span>
+        <div className="max-w-4xl mx-auto space-y-12">
+          <div className="inline-flex items-center gap-3">
+            <div className="w-12 h-1 bg-brand-green rounded-full" />
+            <span className="text-sm font-black text-brand-green uppercase tracking-[0.4em]">Final Step</span>
+            <div className="w-12 h-1 bg-brand-green rounded-full" />
+          </div>
+          
+          <h2 className="text-5xl md:text-8xl font-black text-brand-navy italic tracking-tighter leading-[0.9]">
+            Let&apos;s Discuss Your <br/> <span className="text-brand-green underline decoration-brand-gray underline-offset-[16px]">Project.</span>
           </h2>
-          <p className="text-xl text-slate-400 font-medium leading-relaxed">
+          
+          <p className="text-xl md:text-2xl text-brand-gray0 font-bold max-w-2xl mx-auto leading-tight italic">
             Share your requirements and our team will get back with the right engineering solution for your infrastructure needs.
           </p>
-          <div className="pt-8">
+          
+          <div className="pt-10">
             <Link 
               href="/contact#form" 
-              className="inline-flex items-center gap-3 px-12 py-5 bg-amber-500 text-slate-950 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-2xl shadow-amber-500/20 group"
+              className="inline-flex items-center gap-4 px-16 py-6 bg-brand-navy text-white rounded-[2rem] font-black text-xs uppercase tracking-[0.3em] hover:bg-brand-green hover:text-brand-navy transition-all duration-500 shadow-2xl shadow-black/10 group"
             >
               Get a Quote
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform duration-500" />
             </Link>
           </div>
         </div>

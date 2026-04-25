@@ -65,7 +65,6 @@ Content:
 List:
 RDSS Projects
 MSKVY Projects
-KUSUM Yojana
 Private Industrial Electrical Projects
 
 🔹 8. WHY CHOOSE US
