@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export function ContactHero() {
   return (
-    <section className="relative pt-24 pb-12 bg-white overflow-hidden">
+    <section className="relative pt-32 md:pt-40 pb-12 bg-white overflow-hidden">
       {/* Refined Background Elements */}
       
       
