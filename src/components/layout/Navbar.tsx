@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Menu, X, ArrowRight, ArrowUpRight } from "lucide-react";
 
@@ -43,23 +44,23 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <div className={cn(
-            "bg-amber-500 rounded-lg flex items-center justify-center text-white font-bold transition-all duration-500 shadow-lg shadow-amber-500/20 group-hover:scale-105",
-            isScrolled ? "w-8 h-8 text-sm" : "w-10 h-10 text-xl"
+            "relative transition-all duration-500 group-hover:scale-105",
+            isScrolled ? "w-32 h-10" : "w-40 h-14"
           )}>
-            G
+            <Image
+              src="/images/G&D Brothers Logo.png"
+              alt="G&D Brothers Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
-          <span className={cn(
-            "font-black tracking-tighter transition-all duration-500",
-            isScrolled ? "text-lg text-slate-950 dark:text-white" : "text-2xl text-slate-950 dark:text-white"
-          )}>
-            G&D <span className="text-amber-500">Brothers</span>
-          </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className={cn(
           "hidden md:flex items-center gap-1 transition-all duration-500",
-          isScrolled ? "bg-slate-100/50 dark:bg-slate-800/50 p-1 rounded-full px-2" : "gap-8"
+          isScrolled ? "bg-brand-gray/50 dark:bg-slate-800/50 p-1 rounded-full px-2" : "gap-8"
         )}>
           {navLinks.map((link) => (
             <Link
@@ -68,8 +69,8 @@ export function Navbar() {
               className={cn(
                 "text-xs uppercase tracking-widest font-black transition-all duration-300 px-4 py-2 rounded-full",
                 isScrolled 
-                  ? "text-slate-500 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:bg-white dark:hover:bg-slate-900 shadow-sm shadow-transparent hover:shadow-black/5" 
-                  : "text-slate-700 dark:text-slate-200 hover:text-amber-500"
+                  ? "text-brand-gray0 dark:text-slate-400 hover:text-brand-navy dark:hover:text-white hover:bg-white dark:hover:bg-slate-900 shadow-sm shadow-transparent hover:shadow-black/5" 
+                  : "text-slate-700 dark:text-slate-200 hover:text-brand-green"
               )}
             >
               {link.name}
@@ -84,8 +85,8 @@ export function Navbar() {
             className={cn(
               "inline-flex items-center gap-2 font-black uppercase tracking-widest transition-all duration-500 group",
               isScrolled 
-                ? "bg-amber-500 text-slate-950 px-4 py-2 rounded-full text-[10px]" 
-                : "bg-slate-950 dark:bg-amber-500 text-white dark:text-slate-950 px-6 py-3 rounded-2xl text-xs hover:gap-3 shadow-xl"
+                ? "bg-brand-green text-brand-navy px-4 py-2 rounded-full text-[10px]" 
+                : "bg-brand-navy dark:bg-brand-green text-white dark:text-brand-navy px-6 py-3 rounded-2xl text-xs hover:gap-3 shadow-xl"
             )}
           >
             Get a Quote
@@ -97,7 +98,7 @@ export function Navbar() {
         <button
           className={cn(
             "md:hidden transition-colors rounded-full p-2",
-            isScrolled ? "bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white" : "text-slate-900 dark:text-white"
+            isScrolled ? "bg-brand-gray dark:bg-slate-800 text-slate-900 dark:text-white" : "text-slate-900 dark:text-white"
           )}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -108,7 +109,7 @@ export function Navbar() {
       {/* Mobile Navigation Drawer */}
       <div 
         className={cn(
-          "md:hidden fixed inset-0 z-40 bg-white dark:bg-slate-950 transition-all duration-500 ease-in-out px-6 pt-24",
+          "md:hidden fixed inset-0 z-40 bg-white dark:bg-brand-navy transition-all duration-500 ease-in-out px-6 pt-24",
           mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
         )}
       >
@@ -130,18 +131,18 @@ export function Navbar() {
           ))}
           
           <div className={cn(
-            "pt-12 border-t border-slate-100 dark:border-slate-800 space-y-6 transition-all duration-700",
+            "pt-12 border-t border-brand-gray dark:border-slate-800 space-y-6 transition-all duration-700",
             mobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
           )}>
             <p className="text-xs font-black text-slate-400 uppercase tracking-[0.3em]">Quick Contact</p>
             <div className="space-y-4">
-              <p className="text-2xl font-black text-slate-950 dark:text-white tracking-tighter">info@gdbros.com</p>
-              <p className="text-2xl font-black text-amber-500 tracking-tighter">+91 0253 4518455</p>
+              <p className="text-2xl font-black text-brand-navy dark:text-white tracking-tighter">info@gdbros.com</p>
+              <p className="text-2xl font-black text-brand-green tracking-tighter">+91 0253 4518455</p>
             </div>
             
             <Link
               href="/contact"
-              className="flex items-center justify-center gap-3 bg-slate-950 text-white py-5 rounded-2xl font-black uppercase tracking-widest text-sm"
+              className="flex items-center justify-center gap-3 bg-brand-navy text-white py-5 rounded-2xl font-black uppercase tracking-widest text-sm"
               onClick={() => setMobileMenuOpen(false)}
             >
               Request a Callback

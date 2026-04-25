@@ -23,15 +23,15 @@ export function SingleProjectHero({ title, type, image, category }: SingleProjec
         />
         {/* Dynamic gradient based on category */}
         <div className={cn(
-          "absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent",
+          "absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/40 to-transparent",
           category === "government" ? "opacity-90" : "opacity-80"
         )} />
-        <div className="absolute inset-0 bg-slate-950/20 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-brand-navy/20 backdrop-blur-[1px]" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl space-y-6">
-          <div className="inline-flex items-center gap-3 px-4 py-2 bg-amber-500 rounded-xl text-slate-950 text-[10px] font-black uppercase tracking-widest shadow-xl shadow-amber-500/20">
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-brand-green rounded-xl text-brand-navy text-[10px] font-black uppercase tracking-widest shadow-xl shadow-brand-green/20">
             {type}
           </div>
           

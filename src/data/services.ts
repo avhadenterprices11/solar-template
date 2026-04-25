@@ -1,3 +1,9 @@
+export interface Offering {
+  title: string;
+  detail: string;
+  iconName: string;
+}
+
 export interface ServiceData {
   slug: string;
   hero: {
@@ -11,7 +17,7 @@ export interface ServiceData {
   };
   offerings: {
     heading: string;
-    points: string[];
+    items: Offering[];
   };
   capabilities: {
     heading: string;
@@ -54,12 +60,12 @@ export const services: ServiceData[] = [
     },
     offerings: {
       heading: "Scope of Services",
-      points: [
-        "33kV & 11kV Bay Feeders",
-        "Substation Development (33/11kV PSS)",
-        "HT & LT Line Execution (Single & Double Circuit)",
-        "Switchgear Control Wiring",
-        "Transformer Augmentation (up to 15 MVA)"
+      items: [
+        { title: "33kV & 11kV Bay Feeders", iconName: "Zap", detail: "High-voltage distribution infrastructure." },
+        { title: "Substation Development", iconName: "Activity", detail: "Turnkey PSS design & execution." },
+        { title: "HT & LT Line Execution", iconName: "Cpu", detail: "Transmission network engineering." },
+        { title: "Switchgear Control", iconName: "ShieldCheck", detail: "Precision wiring & automation." },
+        { title: "Transformer Augmentation", iconName: "Gauge", detail: "Capacity upgrades up to 15 MVA." }
       ]
     },
     capabilities: {
@@ -95,7 +101,7 @@ export const services: ServiceData[] = [
     experience: {
       heading: "Relevant Project Experience",
       content: "We have executed and are actively involved in major government and infrastructure projects, including:",
-      list: ["RDSS Projects", "MSKVY Projects", "KUSUM Yojana", "Private Industrial Electrical Projects"]
+      list: ["RDSS Projects", "MSKVY Projects", "Private Industrial Electrical Projects"]
     },
     whyUs: {
       heading: "Why G&D Brothers",
@@ -125,12 +131,12 @@ export const services: ServiceData[] = [
     },
     offerings: {
       heading: "Scope of Services",
-      points: [
-        "Utility-Scale Solar Power Plants",
-        "Rooftop Solar Installations (Industrial & Commercial)",
-        "Hybrid Energy Systems (Solar + Grid + DG)",
-        "Site Assessment & System Design",
-        "Complete Project Execution & Commissioning"
+      items: [
+        { title: "Utility-Scale Solar", iconName: "LayoutGrid", detail: "Large plants with full transmission & grid integration." },
+        { title: "Rooftop Solar", iconName: "Sun", detail: "Optimized installations for industrial & commercial use." },
+        { title: "Hybrid Systems", iconName: "Battery", detail: "Seamless Solar + Grid + DG synchronized setups." },
+        { title: "Site Assessment", iconName: "Search", detail: "Comprehensive feasibility and technical mapping." },
+        { title: "Grid Synchronization", iconName: "Activity", detail: "Precision testing and grid connectivity." }
       ]
     },
     capabilities: {
@@ -166,7 +172,7 @@ export const services: ServiceData[] = [
     experience: {
       heading: "Relevant Project Experience",
       content: "We are actively involved in solar energy projects across government and private sectors, contributing to India’s renewable energy growth.",
-      list: ["MSKVY Solar Projects", "KUSUM Yojana Projects", "Rooftop Solar Installations", "Private Solar EPC Projects"]
+      list: ["MSKVY Solar Projects", "Rooftop Solar Installations", "Private Solar EPC Projects"]
     },
     whyUs: {
       heading: "Why G&D Brothers",
@@ -196,10 +202,11 @@ export const services: ServiceData[] = [
     },
     offerings: {
       heading: "What We Manufacture",
-      points: [
-        "HT & LT Control Panels: Engineered for safe and efficient power distribution.",
-        "Solar Module Mounting Structures: Robust and corrosion-resistant.",
-        "Transmission Line Accessories: Precision components built for strength and durability."
+      items: [
+        { title: "HT & LT Control Panels", iconName: "Zap", detail: "Engineered for safe and efficient power distribution." },
+        { title: "Solar Mounting Structures", iconName: "Layout", detail: "Robust and corrosion-resistant mounting solutions." },
+        { title: "Transmission Accessories", iconName: "Settings2", detail: "Precision components built for strength and durability." },
+        { title: "Custom Fabrication", iconName: "PenTool", detail: "Tailored engineering for specific project needs." }
       ]
     },
     capabilities: {
@@ -264,12 +271,11 @@ export const services: ServiceData[] = [
     },
     offerings: {
       heading: "Scope of Services",
-      points: [
-        "Load Studies & Power System Analysis",
-        "Power System Design & Engineering",
-        "Energy Optimization & Efficiency Planning",
-        "Feasibility Studies & Technical Reports",
-        "Regulatory Guidance & Liaisoning Support"
+      items: [
+        { title: "Load Studies & Design", iconName: "LineChart", detail: "Comprehensive system design and load analysis." },
+        { title: "Energy Optimization", iconName: "PenTool", detail: "Feasibility analysis to improve system efficiency." },
+        { title: "Regulatory Guidance", iconName: "Landmark", detail: "Expert support for government approvals and compliance." },
+        { title: "Technical Evaluation", iconName: "Search", detail: "In-depth auditing and performance assessments." }
       ]
     },
     capabilities: {
@@ -340,12 +346,11 @@ export const services: ServiceData[] = [
     },
     offerings: {
       heading: "Scope of Services",
-      points: [
-        "Solar Plant Operation & Maintenance",
-        "System Monitoring & Performance Tracking",
-        "Preventive Maintenance & Scheduled Inspections",
-        "Fault Detection & Troubleshooting",
-        "Corrective Maintenance & Repairs"
+      items: [
+        { title: "System Monitoring", iconName: "Activity", detail: "24/7 performance tracking and monitoring." },
+        { title: "Scheduled Checks", iconName: "Search", detail: "Periodic preventive maintenance and audits." },
+        { title: "Rapid Repair", iconName: "Settings", detail: "Fast fault detection and resolution protocols." },
+        { title: "Asset Management", iconName: "ShieldCheck", detail: "Long-term reliability and project ROI focus." }
       ]
     },
     capabilities: {
@@ -404,3 +409,4 @@ export const services: ServiceData[] = [
     }
   }
 ];
+

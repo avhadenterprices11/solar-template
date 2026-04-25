@@ -40,7 +40,7 @@ export default function PrivacyPage() {
   }, []);
 
   return (
-    <main className="flex flex-col min-h-screen bg-white dark:bg-slate-950 pt-32 pb-24 overflow-hidden">
+    <main className="flex flex-col min-h-screen bg-white dark:bg-brand-navy pt-32 pb-24 overflow-hidden">
       {/* Legal SEO Metadata */}
       <script
         type="application/ld+json"
@@ -63,11 +63,11 @@ export default function PrivacyPage() {
         <div className="max-w-6xl mx-auto">
           {/* Legal Header */}
           <header className="mb-20 space-y-6 max-w-4xl animate-in fade-in slide-in-from-bottom-8 duration-700">
-             <div className="inline-flex items-center gap-3 px-4 py-2 bg-slate-100 dark:bg-slate-900 rounded-xl text-slate-500 dark:text-slate-400 text-[10px] font-black uppercase tracking-widest">
+             <div className="inline-flex items-center gap-3 px-4 py-2 bg-brand-gray dark:bg-slate-900 rounded-xl text-brand-gray0 dark:text-slate-400 text-[10px] font-black uppercase tracking-widest">
                 Compliance & Legal
              </div>
              <h1 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white italic tracking-tighter leading-none">
-                Privacy <span className="text-amber-500">Policy.</span>
+                Privacy <span className="text-brand-green">Policy.</span>
              </h1>
              <div className="flex items-center gap-4 text-xs font-bold text-slate-400 dark:text-slate-600 uppercase tracking-widest">
                 <span>Effective Date: 24/04/2026</span>
@@ -80,7 +80,7 @@ export default function PrivacyPage() {
             {/* Sticky Sidebar Navigation - Hidden on Print */}
             <aside className="lg:col-span-1 sticky top-32 hidden lg:block print:hidden animate-in fade-in slide-in-from-left-8 duration-700 delay-200">
               <nav className="space-y-1">
-                <p className="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-6 ml-1">Archive Navigation</p>
+                <p className="text-[10px] font-black text-brand-green uppercase tracking-widest mb-6 ml-1">Archive Navigation</p>
                 {tocItems.map((item) => (
                   <button
                     key={item.id}
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
                     className={cn(
                       "block w-full text-left px-4 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all",
                       activeSection === item.id 
-                        ? "bg-slate-900 text-white dark:bg-white dark:text-slate-950 shadow-xl shadow-black/5 scale-[1.02]" 
+                        ? "bg-slate-900 text-white dark:bg-white dark:text-brand-navy shadow-xl shadow-black/5 scale-[1.02]" 
                         : "text-slate-400 hover:text-slate-900 dark:hover:text-white"
                     )}
                   >
@@ -100,7 +100,7 @@ export default function PrivacyPage() {
 
             {/* Legal Content Layout */}
             <article className="lg:col-span-3 prose prose-slate dark:prose-invert max-w-none 
-              prose-h2:text-2xl prose-h2:font-black prose-h2:uppercase prose-h2:tracking-tighter prose-h2:italic prose-h2:text-amber-500 prose-h2:mt-16 prose-h2:mb-6 first:prose-h2:mt-0
+              prose-h2:text-2xl prose-h2:font-black prose-h2:uppercase prose-h2:tracking-tighter prose-h2:italic prose-h2:text-brand-green prose-h2:mt-16 prose-h2:mb-6 first:prose-h2:mt-0
               prose-p:text-lg prose-p:leading-relaxed prose-p:font-medium prose-p:text-slate-600 dark:prose-p:text-slate-400
               prose-li:text-lg prose-li:font-medium prose-li:text-slate-600 dark:prose-li:text-slate-400 prose-ul:list-disc prose-ul:pl-6
               animate-in fade-in slide-in-from-bottom-8 duration-700 delay-400
@@ -197,15 +197,15 @@ export default function PrivacyPage() {
                 <p>
                   If you have any questions regarding this Privacy Policy or G&D Brothers data practices, please reach out:
                 </p>
-                <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 not-prose space-y-4">
+                <div className="bg-brand-gray dark:bg-slate-900 p-8 rounded-3xl border border-brand-gray dark:border-slate-800 not-prose space-y-4">
                   <p className="font-black text-slate-900 dark:text-white uppercase tracking-tighter text-2xl italic">G&D Brothers</p>
                   <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
                     02, Krishna Appt., Motwani Road,<br/>
                     Nashik Road, Nashik – 422101
                   </p>
                   <div className="flex flex-col gap-2 pt-4 border-t border-slate-200 dark:border-slate-800">
-                      <p className="text-sm font-black text-amber-500 uppercase tracking-widest">Phone: 0253 4518455</p>
-                      <p className="text-sm font-black text-amber-500 uppercase tracking-widest">Email: info@gdbros.com</p>
+                      <p className="text-sm font-black text-brand-green uppercase tracking-widest">Phone: 0253 4518455</p>
+                      <p className="text-sm font-black text-brand-green uppercase tracking-widest">Email: info@gdbros.com</p>
                   </div>
                 </div>
               </section>

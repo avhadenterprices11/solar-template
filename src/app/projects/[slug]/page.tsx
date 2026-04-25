@@ -40,7 +40,7 @@ export default async function ProjectDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-slate-950">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-brand-navy">
       <SingleProjectHero 
         title={project.title} 
         type={project.type} 
@@ -54,9 +54,9 @@ export default async function ProjectDetailPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
             <div className="lg:col-span-2 space-y-12 animate-in fade-in slide-in-from-left-8 duration-700">
                <div className="space-y-6">
-                  <h2 className="text-sm font-black text-amber-500 uppercase tracking-widest leading-none">Overview</h2>
+                  <h2 className="text-sm font-black text-brand-green uppercase tracking-widest leading-none">Overview</h2>
                   <h3 className="text-4xl font-black text-slate-900 dark:text-white italic tracking-tighter">Project Mission</h3>
-                  <p className="text-2xl text-slate-800 dark:text-slate-200 font-medium leading-relaxed italic border-l-4 border-slate-100 dark:border-slate-800 pl-8">
+                  <p className="text-2xl text-slate-800 dark:text-slate-200 font-medium leading-relaxed italic border-l-4 border-brand-gray dark:border-slate-800 pl-8">
                     {project.overview}
                   </p>
                </div>
@@ -84,7 +84,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       <div className="container mx-auto px-6 py-24 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
          <div className="mb-12">
-            <h2 className="text-sm font-black text-amber-500 uppercase tracking-widest leading-none mb-4">Execution Results</h2>
+            <h2 className="text-sm font-black text-brand-green uppercase tracking-widest leading-none mb-4">Execution Results</h2>
             <h3 className="text-4xl font-black text-slate-900 dark:text-white italic tracking-tighter">Impact & Delivery</h3>
          </div>
          <ProjectImpact impact={project.impact} />

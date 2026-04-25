@@ -1,5 +1,5 @@
 import React from "react";
-import { FolderCheck } from "lucide-react";
+import { FolderCheck, ArrowUpRight } from "lucide-react";
 
 interface ServiceExperienceProps {
   heading: string;
@@ -9,29 +9,54 @@ interface ServiceExperienceProps {
 
 export function ServiceExperience({ heading, content, list }: ServiceExperienceProps) {
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
+    <section className="py-32 bg-white">
       <div className="container mx-auto px-6">
-        <div className="max-w-5xl mx-auto bg-white dark:bg-slate-950 rounded-[3rem] p-12 md:p-20 shadow-xl shadow-black/[0.02] border border-slate-100 dark:border-slate-800">
-           <div className="flex flex-col md:flex-row gap-12 items-start">
-              <div className="md:w-1/3 space-y-4">
-                 <div className="w-16 h-16 bg-amber-500 rounded-2xl flex items-center justify-center text-slate-950 mb-6">
-                    <FolderCheck size={32} />
+        <div className="max-w-6xl mx-auto">
+           <div className="flex flex-col lg:flex-row gap-20 items-start">
+              
+              <div className="lg:w-5/12 space-y-10">
+                 <div className="space-y-6">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-1 bg-brand-green rounded-full" />
+                      <h2 className="text-sm font-black text-brand-green uppercase tracking-[0.4em]">Validation</h2>
+                    </div>
+                    <h3 className="text-5xl md:text-7xl font-black text-brand-navy italic tracking-tighter leading-[0.9]">
+                       {heading}
+                    </h3>
                  </div>
-                 <h3 className="text-3xl font-black text-slate-900 dark:text-white leading-tight">
-                    {heading}
-                 </h3>
                  {content && (
-                    <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
-                       {content}
+                    <p className="text-xl text-brand-gray0 font-bold leading-tight italic">
+                       &quot;{content}&quot;
                     </p>
                  )}
+                 <div className="pt-8">
+                    <div className="inline-flex items-center gap-4 p-4 bg-brand-gray rounded-2xl border border-brand-gray">
+                       <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-brand-navy shadow-xl shadow-black/5">
+                          <FolderCheck size={24} />
+                       </div>
+                       <div>
+                          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Portfolio Scale</p>
+                          <p className="text-sm font-black text-brand-navy italic">Active Government Projects</p>
+                       </div>
+                    </div>
+                 </div>
               </div>
               
-              <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="lg:w-7/12 grid grid-cols-1 md:grid-cols-2 gap-6 pt-10">
                  {list?.map((item, index) => (
-                    <div key={index} className="p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-dashed border-slate-200 dark:border-slate-800 flex items-center justify-between group hover:border-amber-500/50 transition-colors">
-                       <span className="font-bold text-slate-800 dark:text-slate-200">{item}</span>
-                       <div className="w-2 h-2 bg-amber-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div key={index} className="group p-10 bg-brand-gray rounded-[3rem] border border-brand-gray flex flex-col justify-between hover:bg-white hover:border-brand-green/30 hover:shadow-2xl hover:shadow-black/5 transition-all duration-700 min-h-[220px]">
+                       <div className="flex justify-between items-start">
+                          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-300 group-hover:bg-brand-green group-hover:text-brand-navy transition-all duration-500">
+                             <span className="text-xs font-black italic">0{index + 1}</span>
+                          </div>
+                          <ArrowUpRight size={24} className="text-brand-gray group-hover:text-brand-green transition-colors" />
+                       </div>
+                       <div className="space-y-4">
+                          <h4 className="text-2xl font-black text-brand-navy italic tracking-tighter leading-tight group-hover:text-brand-green transition-colors">
+                            {item}
+                          </h4>
+                          <div className="w-8 h-1 bg-slate-200 group-hover:w-16 group-hover:bg-brand-green transition-all duration-700" />
+                       </div>
                     </div>
                  ))}
               </div>

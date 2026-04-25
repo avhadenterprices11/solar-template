@@ -33,7 +33,7 @@ const badges = [
 
 export function Accreditations() {
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center bg-white selection:bg-amber-100 overflow-hidden">
+    <section className="relative h-fit pb-10 flex items-center bg-white selection:bg-amber-100 overflow-hidden">
       {/* Structural Pattern Background */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:32px_32px]" />
@@ -46,23 +46,23 @@ export function Accreditations() {
           <div className="lg:w-1/3 space-y-10 animate-in fade-in slide-in-from-left-8 duration-1000">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2">
-                <Verified className="text-amber-500" size={18} />
-                <span className="text-sm font-black text-amber-500 uppercase tracking-[0.3em]">Compliance & Safety</span>
+                <Verified className="text-brand-green" size={18} />
+                <span className="text-sm font-black text-brand-green uppercase tracking-[0.3em]">Compliance & Safety</span>
               </div>
               
               <div className="space-y-4">
-                <h2 className="text-5xl md:text-6xl font-black text-slate-950 leading-[1.05] italic tracking-tighter">
-                  A Foundation <br/> Of <span className="text-amber-500 underline decoration-slate-100 underline-offset-8">Trust.</span>
+                <h2 className="text-5xl md:text-6xl font-black text-brand-navy leading-[1.05] italic tracking-tighter">
+                  A Foundation <br/> Of <span className="text-brand-green underline decoration-brand-gray underline-offset-8">Trust.</span>
                 </h2>
-                <p className="text-slate-500 font-medium text-lg leading-relaxed max-w-sm">
+                <p className="text-brand-gray0 font-medium text-lg leading-relaxed max-w-sm">
                   G&D Brothers operates within a rigorous framework of national certifications and safety protocols.
                 </p>
               </div>
             </div>
 
-            <div className="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 space-y-4">
+            <div className="bg-brand-gray p-8 rounded-[2rem] border border-brand-gray space-y-4">
                <p className="text-xs font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
-                 <CheckCircle size={14} className="text-amber-500" />
+                 <CheckCircle size={14} className="text-brand-green" />
                  Operational Guarantee
                </p>
                <p className="text-sm text-slate-600 font-medium leading-relaxed italic">
@@ -78,18 +78,18 @@ export function Accreditations() {
               return (
                 <div 
                   key={badge.title} 
-                  className="group relative p-10 bg-white border border-slate-100 rounded-[2.5rem] transition-all duration-500 hover:border-amber-500/50 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.08)] overflow-hidden"
+                  className="group relative p-10 bg-white border border-brand-gray rounded-[2.5rem] transition-all duration-500 hover:border-brand-green/50 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.08)] overflow-hidden"
                 >
                   {/* Subtle hover gradient */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 blur-[50px] group-hover:bg-amber-500/10 transition-colors" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-brand-green/5 blur-[50px] group-hover:bg-brand-green/10 transition-colors" />
 
                   <div className="relative z-10 flex flex-col h-full justify-between gap-8">
                     <div className="flex items-start justify-between">
-                      <div className="w-14 h-14 bg-slate-950 text-white dark:text-slate-950 dark:bg-white rounded-2xl flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-slate-950 shadow-xl shadow-slate-950/20">
+                      <div className="w-14 h-14 bg-brand-navy text-white dark:text-brand-navy dark:bg-white rounded-2xl flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:bg-brand-green group-hover:text-brand-navy shadow-xl shadow-brand-navy/20">
                         <Icon size={28} />
                       </div>
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                         <div className="text-[10px] font-black text-amber-500 bg-amber-50 px-3 py-1 rounded-full uppercase tracking-widest flex items-center gap-1">
+                         <div className="text-[10px] font-black text-brand-green bg-amber-50 px-3 py-1 rounded-full uppercase tracking-widest flex items-center gap-1">
                            <Verified size={10} />
                            Verified
                          </div>
@@ -98,10 +98,10 @@ export function Accreditations() {
 
                     <div className="space-y-3">
                       <div>
-                        <p className="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">{badge.subtitle}</p>
-                        <h4 className="text-2xl font-black text-slate-950 italic tracking-tighter group-hover:text-amber-500 transition-colors">{badge.title}</h4>
+                        <p className="text-[10px] font-black text-brand-green uppercase tracking-widest mb-1">{badge.subtitle}</p>
+                        <h4 className="text-2xl font-black text-brand-navy italic tracking-tighter group-hover:text-brand-green transition-colors">{badge.title}</h4>
                       </div>
-                      <p className="text-sm text-slate-500 font-medium leading-relaxed group-hover:text-slate-600">
+                      <p className="text-sm text-brand-gray0 font-medium leading-relaxed group-hover:text-slate-600">
                         {badge.description}
                       </p>
                     </div>
@@ -114,12 +114,6 @@ export function Accreditations() {
         </div>
       </div>
 
-      {/* Decorative vertical text for desktop */}
-      <div className="absolute right-12 top-1/2 -translate-y-1/2 hidden xl:block pointer-events-none opacity-[0.02]">
-        <span className="text-[14rem] font-black uppercase tracking-tighter writing-vertical-rl rotate-180 select-none">
-          QUALIFIED
-        </span>
-      </div>
     </section>
   );
 }

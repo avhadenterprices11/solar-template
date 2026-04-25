@@ -2,18 +2,18 @@ import React from "react";
 
 export function ContactMap() {
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
+    <section className="py-24 bg-brand-gray dark:bg-slate-900/50">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-16 items-center">
           <div className="lg:col-span-1 space-y-8">
             <div className="space-y-4">
-              <h2 className="text-sm font-black text-amber-500 uppercase tracking-widest leading-none">Global HQ</h2>
+              <h2 className="text-sm font-black text-brand-green uppercase tracking-widest leading-none">Global HQ</h2>
               <h3 className="text-4xl font-black text-slate-900 dark:text-white italic tracking-tighter">Our Location</h3>
             </div>
             
             <div className="space-y-6">
-              <div className="p-6 bg-white dark:bg-slate-950 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-xl shadow-black/5">
-                <p className="text-[10px] font-black text-amber-500 uppercase tracking-widest leading-none mb-3">Headquarters</p>
+              <div className="p-6 bg-white dark:bg-brand-navy rounded-3xl border border-brand-gray dark:border-slate-800 shadow-xl shadow-black/5">
+                <p className="text-[10px] font-black text-brand-green uppercase tracking-widest leading-none mb-3">Headquarters</p>
                 <p className="text-slate-900 dark:text-white font-black leading-snug">
                   02, Krishna Appt.,<br/>
                   Motwani Road,<br/>
@@ -21,7 +21,7 @@ export function ContactMap() {
                 </p>
               </div>
               
-              <div className="p-6 border-l-4 border-amber-500 bg-slate-100 dark:bg-slate-900/50 rounded-r-3xl">
+              <div className="p-6 border-l-4 border-brand-green bg-brand-gray dark:bg-slate-900/50 rounded-r-3xl">
                 <p className="text-sm font-bold text-slate-600 dark:text-slate-400 leading-relaxed italic">
                   "Perfectly positioned to serve Industrial clients across Maharashtra and National Solar initiatives."
                 </p>
@@ -29,7 +29,7 @@ export function ContactMap() {
             </div>
           </div>
 
-          <div className="lg:col-span-3 h-[500px] rounded-[3.5rem] overflow-hidden border border-slate-100 dark:border-slate-800 shadow-2xl relative">
+          <div className="lg:col-span-3 h-[500px] rounded-[3.5rem] overflow-hidden border border-brand-gray dark:border-slate-800 shadow-2xl relative">
             {/* Google Map Inframe */}
             <iframe 
                title="G&D Brothers Headquarters"
@@ -41,7 +41,7 @@ export function ContactMap() {
                referrerPolicy="no-referrer-when-downgrade"
             />
             {/* Aesthetic Overlay */}
-            <div className="absolute inset-0 pointer-events-none border-[12px] border-white dark:border-slate-950/20 rounded-[3.5rem]" />
+            <div className="absolute inset-0 pointer-events-none border-[12px] border-white dark:border-brand-navy/20 rounded-[3.5rem]" />
           </div>
         </div>
       </div>

@@ -24,16 +24,16 @@ export function RelatedProjects({ currentProjectId, category }: RelatedProjectsP
   }
 
   return (
-    <section className="py-24 border-t border-slate-100 dark:border-slate-800">
+    <section className="py-24 border-t border-brand-gray dark:border-slate-800">
       <div className="container mx-auto px-6">
         <div className="flex items-end justify-between mb-12">
            <div className="space-y-4">
-              <h2 className="text-sm font-black text-amber-500 uppercase tracking-widest leading-none">Discovery</h2>
+              <h2 className="text-sm font-black text-brand-green uppercase tracking-widest leading-none">Discovery</h2>
               <h3 className="text-3xl font-black text-slate-900 dark:text-white italic tracking-tighter">Related Projects</h3>
            </div>
            <Link 
              href="/projects" 
-             className="text-xs font-black uppercase tracking-widest text-slate-400 hover:text-amber-500 transition-colors"
+             className="text-xs font-black uppercase tracking-widest text-slate-400 hover:text-brand-green transition-colors"
            >
              View All Portfolio
            </Link>
@@ -46,23 +46,23 @@ export function RelatedProjects({ currentProjectId, category }: RelatedProjectsP
                href={`/projects/${project.slug}`}
                className="group flex flex-col gap-6"
              >
-                <div className="relative h-64 w-full rounded-[2.5rem] overflow-hidden border border-slate-100 dark:border-slate-800">
+                <div className="relative h-64 w-full rounded-[2.5rem] overflow-hidden border border-brand-gray dark:border-slate-800">
                    <Image 
                      src={project.image} 
                      alt={project.title} 
                      fill 
                      className="object-cover group-hover:scale-110 transition-transform duration-700"
                    />
-                   <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-slate-950/0 transition-colors" />
-                   <div className="absolute top-6 right-6 p-3 bg-white dark:bg-slate-900 rounded-2xl opacity-0 group-hover:opacity-100 -translate-y-4 group-hover:translate-y-0 transition-all text-amber-500">
+                   <div className="absolute inset-0 bg-brand-navy/20 group-hover:bg-brand-navy/0 transition-colors" />
+                   <div className="absolute top-6 right-6 p-3 bg-white dark:bg-slate-900 rounded-2xl opacity-0 group-hover:opacity-100 -translate-y-4 group-hover:translate-y-0 transition-all text-brand-green">
                       <ArrowUpRight size={20} />
                    </div>
                 </div>
                 <div className="px-2 space-y-2">
-                   <p className="text-[10px] font-black text-amber-500 uppercase tracking-widest leading-none">
+                   <p className="text-[10px] font-black text-brand-green uppercase tracking-widest leading-none">
                      {project.type}
                    </p>
-                   <h4 className="text-xl font-black text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors tracking-tight italic">
+                   <h4 className="text-xl font-black text-slate-900 dark:text-white group-hover:text-brand-green transition-colors tracking-tight italic">
                      {project.title}
                    </h4>
                 </div>

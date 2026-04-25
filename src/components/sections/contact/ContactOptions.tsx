@@ -1,67 +1,78 @@
 import React from "react";
-import { Phone, Mail, MapPin, MessageSquare } from "lucide-react";
+import { Phone, Mail, MapPin, MessageSquare, ArrowUpRight } from "lucide-react";
 
 const options = [
   {
-    title: "Call Us",
+    title: "Primary Direct",
     value: "0253 4518455",
-    description: "Mon-Sat, 9AM-6PM",
+    label: "Call Support",
+    description: "Available Mon-Sat, 9AM-6PM",
     icon: Phone,
-    color: "bg-amber-500",
+    color: "bg-brand-green",
     href: "tel:02534518455"
   },
   {
-    title: "Email Us",
+    title: "Official Channel",
     value: "info@gdbros.com",
-    description: "For project inquiries",
+    label: "Email Inquiry",
+    description: "24-hour response guarantee",
     icon: Mail,
-    color: "bg-blue-500",
+    color: "bg-brand-navy",
     href: "mailto:info@gdbros.com"
   },
   {
-    title: "Visit Us",
-    value: "Nashik, MH",
-    description: "Headquarters & Engineering",
+    title: "Engineering HQ",
+    value: "Nashik, Maharashtra",
+    label: "Visit Office",
+    description: "02, Krishna Appt., Nashik Road",
     icon: MapPin,
-    color: "bg-slate-900",
+    color: "bg-brand-green",
     href: "https://goo.gl/maps/placeholder"
-  },
-  {
-    title: "Quick Response",
-    value: "Consultations",
-    description: "Project discussions ready",
-    icon: MessageSquare,
-    color: "bg-emerald-500",
-    href: "#form"
   }
 ];
 
 export function ContactOptions() {
   return (
-    <section className="py-24 bg-white dark:bg-slate-950">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {options.map((option, idx) => (
             <a
               key={idx}
               href={option.href}
-              className="group p-8 bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 hover:border-amber-500/50 hover:bg-white dark:hover:bg-slate-950 hover:shadow-2xl hover:shadow-black/5 transition-all duration-500"
+              className="group relative p-12 bg-white rounded-[3rem] border border-brand-gray hover:border-brand-green/50 hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.06)] transition-all duration-700 overflow-hidden"
             >
-              <div className={`w-14 h-14 ${option.color} text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-black/5 group-hover:scale-110 transition-transform`}>
-                <option.icon size={26} />
-              </div>
-              <div className="space-y-4">
-                <div>
-                   <p className="text-[10px] font-black text-amber-500 uppercase tracking-widest leading-none mb-2">
-                     {option.title}
-                   </p>
-                   <p className="text-xl font-black text-slate-900 dark:text-white tracking-tight italic">
-                     {option.value}
-                   </p>
+              {/* Subtle accent blur */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-green/5 blur-[60px] group-hover:bg-brand-green/10 transition-colors" />
+              
+              <div className="relative z-10 space-y-12">
+                <div className="flex items-start justify-between">
+                  <div className={`w-16 h-16 ${option.color} text-white dark:text-brand-navy rounded-[1.5rem] flex items-center justify-center shadow-2xl shadow-black/5 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500`}>
+                    <option.icon size={28} />
+                  </div>
+                  <div className="w-10 h-10 rounded-full border border-brand-gray flex items-center justify-center text-slate-300 group-hover:text-brand-green group-hover:border-brand-green transition-all">
+                    <ArrowUpRight size={18} />
+                  </div>
                 </div>
-                <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
-                  {option.description}
-                </p>
+
+                <div className="space-y-4">
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-black text-brand-green uppercase tracking-[0.3em]">
+                      {option.title}
+                    </p>
+                    <h4 className="text-3xl font-black text-brand-navy italic tracking-tighter">
+                      {option.value}
+                    </h4>
+                  </div>
+                  <div className="pt-6 border-t border-brand-gray">
+                    <p className="text-sm font-black text-slate-900 uppercase tracking-widest mb-1">
+                      {option.label}
+                    </p>
+                    <p className="text-sm font-medium text-brand-gray0 italic">
+                      {option.description}
+                    </p>
+                  </div>
+                </div>
               </div>
             </a>
           ))}

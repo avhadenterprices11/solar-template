@@ -63,7 +63,6 @@ Content:
  We are actively involved in solar energy projects across government and private sectors, contributing to India’s renewable energy growth.
 List:
 MSKVY Solar Projects
-KUSUM Yojana Projects
 Rooftop Solar Installations
 Private Solar EPC Projects
 

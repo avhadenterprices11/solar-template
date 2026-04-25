@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, CheckCircle2, Loader2, ArrowRight } from "lucide-react";
+import { Send, CheckCircle2, Loader2, ArrowRight, User, Phone, Mail, FileText, MessageSquare } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const services = [
@@ -21,7 +21,7 @@ export function ContactForm() {
     setIsSubmitting(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
     setIsSuccess(true);
@@ -29,19 +29,19 @@ export function ContactForm() {
 
   if (isSuccess) {
     return (
-      <div className="bg-slate-900 rounded-[3rem] border border-white/10 p-12 text-center space-y-8 animate-in zoom-in-95 duration-500">
-        <div className="w-20 h-20 bg-amber-500 text-slate-950 rounded-full flex items-center justify-center mx-auto shadow-2xl shadow-amber-500/20">
-          <CheckCircle2 size={40} />
+      <div className="bg-brand-gray rounded-[4rem] border border-brand-gray p-16 text-center space-y-10 animate-in zoom-in-95 duration-700">
+        <div className="w-24 h-24 bg-brand-green text-brand-navy rounded-full flex items-center justify-center mx-auto shadow-2xl shadow-brand-green/30">
+          <CheckCircle2 size={48} />
         </div>
         <div className="space-y-4">
-          <h3 className="text-3xl font-black text-white italic">Inquiry Received!</h3>
-          <p className="text-slate-400 text-lg max-w-sm mx-auto">
+          <h3 className="text-4xl font-black text-brand-navy italic tracking-tighter">Inquiry Received.</h3>
+          <p className="text-brand-gray0 font-bold text-lg max-w-sm mx-auto leading-tight italic">
             Our engineering team will review your requirements and get back to you within 24 hours.
           </p>
         </div>
         <button 
           onClick={() => setIsSuccess(false)}
-          className="text-amber-500 font-black uppercase tracking-widest text-xs hover:text-white transition-colors"
+          className="text-brand-green font-black uppercase tracking-[0.3em] text-[10px] hover:text-brand-navy transition-colors"
         >
           Send Another Message
         </button>
@@ -50,95 +50,123 @@ export function ContactForm() {
   }
 
   return (
-    <div id="form" className="bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 p-8 md:p-12 shadow-2xl shadow-black/5 relative overflow-hidden">
-      {/* Form Decoration */}
-      <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 blur-[60px]" />
+    <div id="form" className="bg-white rounded-[4rem] border border-brand-gray p-10 md:p-20 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.04)] relative overflow-hidden group">
+      {/* Refined decoration */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-brand-green/5 blur-[100px] group-hover:bg-brand-green/10 transition-colors" />
       
-      <div className="relative z-10 space-y-10">
-        <div className="space-y-4">
-          <h2 className="text-sm font-black text-amber-500 uppercase tracking-widest leading-none">Inquiry Form</h2>
-          <h3 className="text-4xl font-black text-slate-900 dark:text-white italic tracking-tighter">Send Us a Message</h3>
+      <div className="relative z-10 space-y-16">
+        <div className="space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-1 bg-brand-green rounded-full" />
+            <h2 className="text-sm font-black text-brand-green uppercase tracking-[0.4em]">Strategic Inquiry</h2>
+          </div>
+          <h3 className="text-5xl font-black text-brand-navy italic tracking-tighter leading-[0.9]">Send Us a <br/> <span className="text-brand-green">Message.</span></h3>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-4">Full Name</label>
+        <form onSubmit={handleSubmit} className="space-y-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="space-y-4">
+              <label className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
+                <User size={12} className="text-brand-green" />
+                Full Name
+              </label>
               <input 
                 required
                 type="text" 
-                placeholder="John Doe"
-                className="w-full h-16 px-6 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 rounded-2xl focus:outline-none focus:border-amber-500 transition-colors text-slate-900 dark:text-white font-bold"
+                placeholder="Ex. Rahul Sharma"
+                className="w-full h-16 px-0 bg-transparent border-b-2 border-brand-gray focus:border-brand-green transition-colors text-brand-navy font-bold text-lg placeholder:text-slate-300 focus:outline-none"
               />
             </div>
-            <div className="space-y-2">
-              <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-4">Phone Number</label>
+            <div className="space-y-4">
+              <label className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
+                <Phone size={12} className="text-brand-green" />
+                Phone Number
+              </label>
               <input 
                 required
                 type="tel" 
                 placeholder="+91 00000 00000"
-                className="w-full h-16 px-6 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 rounded-2xl focus:outline-none focus:border-amber-500 transition-colors text-slate-900 dark:text-white font-bold"
+                className="w-full h-16 px-0 bg-transparent border-b-2 border-brand-gray focus:border-brand-green transition-colors text-brand-navy font-bold text-lg placeholder:text-slate-300 focus:outline-none"
               />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-4">Email Address</label>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="space-y-4">
+              <label className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
+                <Mail size={12} className="text-brand-green" />
+                Email Address
+              </label>
               <input 
                 required
                 type="email" 
-                placeholder="john@example.com"
-                className="w-full h-16 px-6 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 rounded-2xl focus:outline-none focus:border-amber-500 transition-colors text-slate-900 dark:text-white font-bold"
+                placeholder="name@company.com"
+                className="w-full h-16 px-0 bg-transparent border-b-2 border-brand-gray focus:border-brand-green transition-colors text-brand-navy font-bold text-lg placeholder:text-slate-300 focus:outline-none"
               />
             </div>
-            <div className="space-y-2">
-              <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-4">Service Required</label>
-              <select 
-                required
-                className="w-full h-16 px-6 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 rounded-2xl focus:outline-none focus:border-amber-500 transition-colors text-slate-900 dark:text-white font-bold appearance-none cursor-pointer"
-              >
-                <option value="" disabled selected>Select a Service</option>
-                {services.map(service => (
-                  <option key={service} value={service}>{service}</option>
-                ))}
-              </select>
+            <div className="space-y-4">
+              <label className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
+                <FileText size={12} className="text-brand-green" />
+                Service Required
+              </label>
+              <div className="relative">
+                <select 
+                  required
+                  className="w-full h-16 px-0 bg-transparent border-b-2 border-brand-gray focus:border-brand-green transition-colors text-brand-navy font-bold text-lg appearance-none cursor-pointer focus:outline-none"
+                >
+                  <option value="" disabled selected>Select Specialization</option>
+                  {services.map(service => (
+                    <option key={service} value={service}>{service}</option>
+                  ))}
+                </select>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
+                  <ArrowRight size={20} className="rotate-90 text-slate-300" />
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="space-y-2">
-            <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-4">Project Requirement</label>
+          <div className="space-y-4">
+            <label className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
+              <MessageSquare size={12} className="text-brand-green" />
+              Project Requirement
+            </label>
             <textarea 
               required
               placeholder="Tell us about your project infrastructure needs..."
-              rows={4}
-              className="w-full p-6 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 rounded-2xl focus:outline-none focus:border-amber-500 transition-colors text-slate-900 dark:text-white font-bold resize-none"
+              rows={3}
+              className="w-full py-4 bg-transparent border-b-2 border-brand-gray focus:border-brand-green transition-colors text-brand-navy font-bold text-lg placeholder:text-slate-300 focus:outline-none resize-none"
             />
           </div>
 
-          <button 
-            disabled={isSubmitting}
-            className={cn(
-              "w-full h-18 bg-slate-900 dark:bg-amber-500 text-white dark:text-slate-950 rounded-2xl font-black text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3 group hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-50 disabled:pointer-events-none shadow-xl shadow-black/5",
-              isSubmitting ? "cursor-not-allowed" : "cursor-pointer"
-            )}
-          >
-            {isSubmitting ? (
-              <>
-                <Loader2 size={20} className="animate-spin" />
-                Processing...
-              </>
-            ) : (
-              <>
-                Submit Inquiry
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </>
-            )}
-          </button>
+          <div className="pt-6">
+            <button 
+              disabled={isSubmitting}
+              className={cn(
+                "w-full h-20 bg-brand-navy text-white rounded-[2rem] font-black text-xs uppercase tracking-[0.4em] flex items-center justify-center gap-4 group hover:bg-brand-green hover:text-brand-navy transition-all duration-500 disabled:opacity-50 disabled:pointer-events-none shadow-2xl shadow-black/10",
+                isSubmitting ? "cursor-not-allowed" : "cursor-pointer"
+              )}
+            >
+              {isSubmitting ? (
+                <>
+                  <Loader2 size={24} className="animate-spin" />
+                  Processing...
+                </>
+              ) : (
+                <>
+                  Submit Inquiry
+                  <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform duration-500" />
+                </>
+              )}
+            </button>
+          </div>
           
-          <p className="text-center text-[10px] font-black text-slate-400 uppercase tracking-widest">
-            We typically respond within 24 hours.
-          </p>
+          <div className="flex items-center justify-center gap-4 pt-4">
+             <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+             <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">
+               Typical response time: Under 24 Hours
+             </p>
+          </div>
         </form>
       </div>
     </div>
