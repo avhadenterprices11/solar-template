@@ -109,11 +109,29 @@ export function Navbar() {
       {/* Mobile Navigation Drawer */}
       <div 
         className={cn(
-          "md:hidden fixed inset-0 z-40 bg-white dark:bg-brand-navy transition-all duration-500 ease-in-out px-6 pt-24",
+          "md:hidden fixed inset-0 z-40 bg-white dark:bg-brand-navy transition-all duration-500 ease-in-out px-6",
           mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
         )}
       >
-        <div className="flex flex-col gap-8">
+        {/* Drawer Header */}
+        <div className="flex items-center justify-between py-8">
+          <div className="relative w-32 h-10">
+            <Image
+              src="/images/G&D Brothers Logo.png"
+              alt="G&D Brothers Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <button 
+            onClick={() => setMobileMenuOpen(false)}
+            className="p-2 text-slate-900 dark:text-white"
+          >
+            <X size={32} />
+          </button>
+        </div>
+
+        <div className="flex flex-col gap-8 pt-8">
           {navLinks.map((link, i) => (
             <Link
               key={link.name}

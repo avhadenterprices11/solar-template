@@ -14,7 +14,7 @@ const projectCategories = [
     description: "Large-scale solar power plant development under the Mukhyamantri Saur Krushi Vahini Yojana.",
     icon: Globe,
     image: "/images/project-mskvy.png",
-    className: "md:col-span-8 md:row-span-2 min-h-[450px]"
+    className: "md:col-span-8 md:row-span-2 min-h-[300px]"
   },
   {
     title: "RDSS 1.0 & 2.0",
@@ -23,7 +23,7 @@ const projectCategories = [
     description: "Revamped Distribution Sector Scheme focused on improving operational efficiency.",
     icon: LayoutGrid,
     image: "/images/project-rdss.png",
-    className: "md:col-span-4 md:row-span-1 min-h-[300px]"
+    className: "md:col-span-4 md:row-span-1 min-h-[200px]"
   },
   {
     title: "Industrial Portfolio",
@@ -32,13 +32,13 @@ const projectCategories = [
     description: "Turnkey electrical and solar solutions for private manufacturing units.",
     icon: FolderRoot,
     image: "/images/project-industrial.png",
-    className: "md:col-span-4 md:row-span-1 min-h-[300px]"
+    className: "md:col-span-4 md:row-span-1 min-h-[200px]"
   }
 ];
 
 export function Projects() {
   return (
-    <section className="relative py-32 bg-[#F8F9FA] selection:bg-brand-green/20 overflow-hidden">
+    <section className="relative py-6 md:py-8 bg-[#F8F9FA] selection:bg-brand-green/20 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
         <div className="absolute -top-24 -right-24 w-[500px] h-[500px] bg-brand-green/5 rounded-full blur-[120px]" />
@@ -47,30 +47,29 @@ export function Projects() {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20 animate-in fade-in slide-in-from-bottom-10 duration-1000">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-6 animate-in fade-in slide-in-from-bottom-10 duration-1000">
           <div className="space-y-6 max-w-2xl">
             <div className="inline-flex items-center gap-3">
               <span className="w-12 h-[2px] bg-brand-green rounded-full" />
               <span className="text-xs font-bold text-brand-green uppercase tracking-[0.4em]">Project Excellence</span>
             </div>
-            <h2 className="text-5xl md:text-8xl font-black text-brand-navy leading-[0.9] tracking-tighter">
+            <h2 className="text-3xl md:text-5xl font-black text-brand-navy leading-[0.95] tracking-tighter">
               A Legacy Of <br />
               <span className="text-brand-green italic">Infrastructural</span> Impact.
             </h2>
-            <p className="text-brand-navy/60 font-medium text-lg leading-relaxed max-w-xl">
-              From mega-scale government solar initiatives to high-precision industrial power systems, 
-              we are architecting the future of energy distribution.
+            <p className="text-brand-navy/60 font-medium text-sm leading-relaxed max-w-lg">
+              Architecting the future of energy distribution from mega-scale government solar to precision industrial systems.
             </p>
           </div>
 
           <div className="pb-4">
             <Link 
               href="/projects"
-              className="group inline-flex items-center gap-4 bg-brand-navy text-white px-8 py-4 rounded-full font-bold hover:bg-brand-green hover:text-brand-navy transition-all duration-500 shadow-xl shadow-brand-navy/10"
+              className="group inline-flex items-center gap-3 bg-brand-navy text-white px-6 py-3 rounded-full font-bold text-xs hover:bg-brand-green hover:text-brand-navy transition-all duration-500 shadow-xl shadow-brand-navy/10"
             >
-              Explore Full Portfolio
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-white transition-colors">
-                <ArrowRight size={20} />
+              Full Portfolio
+              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-white transition-colors">
+                <ArrowRight size={16} />
               </div>
             </Link>
           </div>
@@ -105,10 +104,10 @@ export function Projects() {
                 </div>
 
                 {/* Content Overlay */}
-                <div className="relative h-full p-10 flex flex-col justify-between z-10 text-white">
+                <div className="relative h-full p-6 flex flex-col justify-between z-10 text-white">
                   <div className="flex items-start justify-between">
-                    <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-2xl group-hover:bg-brand-green group-hover:border-brand-green transition-all duration-500 group-hover:-translate-y-1">
-                      <Icon size={28} className="text-white" />
+                    <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-2xl group-hover:bg-brand-green group-hover:border-brand-green transition-all duration-500 group-hover:-translate-y-1">
+                      <Icon size={20} className="text-white" />
                     </div>
                     <span className="px-5 py-2 bg-white/10 backdrop-blur-md border border-white/10 text-[10px] font-bold uppercase tracking-[0.2em] rounded-full group-hover:bg-brand-green group-hover:text-brand-navy group-hover:border-brand-green transition-all duration-500">
                       {project.status}
@@ -117,7 +116,7 @@ export function Projects() {
                   
                   <div className="space-y-4">
                     <div className="space-y-1">
-                      <h4 className="text-3xl md:text-4xl font-black italic tracking-tighter leading-tight group-hover:translate-x-2 transition-transform duration-500">
+                      <h4 className="text-2xl md:text-3xl font-black italic tracking-tighter leading-tight group-hover:translate-x-2 transition-transform duration-500">
                         {project.title}
                       </h4>
                       <p className="text-sm font-bold text-brand-green uppercase tracking-[0.3em]">
@@ -125,7 +124,7 @@ export function Projects() {
                       </p>
                     </div>
                     
-                    <p className="text-white/70 font-medium leading-relaxed max-w-sm group-hover:text-white transition-colors duration-500">
+                    <p className="text-white/70 font-medium text-xs leading-relaxed max-w-[200px] group-hover:text-white transition-colors duration-500 line-clamp-2">
                       {project.description}
                     </p>
 

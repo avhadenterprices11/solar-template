@@ -47,7 +47,7 @@ export function Leadership() {
                 <h2 className="text-sm font-black text-brand-green uppercase tracking-[0.4em]">Our Visionaries</h2>
               </div>
               <h3 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-brand-navy italic tracking-tighter leading-[0.9]">
-                The <br/> <span className="text-brand-green underline decoration-brand-gray underline-offset-[12px]">Leadership.</span>
+                The <br/> <span className="text-brand-green [12px]">Leadership.</span>
               </h3>
             </div>
             <p className="text-base sm:text-lg lg:text-xl text-brand-gray0 font-bold leading-tight italic max-w-sm border-l-4 border-brand-green pl-6 py-2">

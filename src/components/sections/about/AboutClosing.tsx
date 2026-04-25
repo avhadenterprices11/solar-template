@@ -15,7 +15,7 @@ export function AboutClosing() {
                 <h2 className="text-sm font-black text-brand-green uppercase tracking-[0.4em]">Final Statement</h2>
               </div>
               <h3 className="text-4xl sm:text-5xl md:text-7xl font-black text-brand-navy italic tracking-tighter leading-[0.9]">
-                Powering <br/> <span className="text-brand-green underline decoration-brand-gray underline-offset-[12px]">Innovation.</span>
+                Powering <br/> <span className="text-brand-green [12px]">Innovation.</span>
               </h3>
             </div>
             <div className="space-y-6 lg:space-y-8 text-brand-gray0 font-bold text-lg lg:text-xl leading-tight italic max-w-lg border-l-4 border-brand-green pl-6 lg:pl-8 py-2">
