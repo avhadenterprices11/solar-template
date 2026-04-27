@@ -39,12 +39,7 @@ export function Hero() {
               End-to-end Electrical EPC, Solar Solutions, and Power Consulting delivered with precision, safety, and engineering excellence.
             </p>
             
-            <div className="hidden md:block pt-4">
-              <div className="text-[10px] font-black text-slate-500 uppercase tracking-[0.5em] writing-vertical-rl rotate-180">
-                G&D BROTHERS EST. 2014
-              </div>
             </div>
-          </div>
 
           {/* Trust Line */}
           <div className="flex items-center gap-3 text-slate-400 animate-in fade-in duration-700 delay-500">

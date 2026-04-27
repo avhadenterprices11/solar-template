@@ -69,7 +69,7 @@ export function SingleServiceHero({ title, subtext, image }: SingleServiceHeroPr
                 className="object-cover transition-transform duration-[2s] group-hover:scale-110"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
             
             {/* Floating Badge */}

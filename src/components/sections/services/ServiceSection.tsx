@@ -87,10 +87,7 @@ export function ServiceSection({ data, index }: ServiceSectionProps) {
 
           {/* Visual Column */}
           <div className="w-full lg:w-1/2 relative">
-            <div className={cn(
-              "relative aspect-[4/5] md:aspect-square w-full rounded-[3rem] overflow-hidden group shadow-2xl",
-              isReversed ? "lg:rounded-tr-none lg:rounded-br-none" : "lg:rounded-tl-none lg:rounded-bl-none"
-            )}>
+            <div className="relative aspect-[4/5] md:aspect-square w-full rounded-[3rem] overflow-hidden group shadow-2xl">
               <Image 
                 src={data.hero.image} 
                 alt={data.hero.title}
