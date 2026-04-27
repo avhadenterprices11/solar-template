@@ -29,7 +29,6 @@ export function AboutTrust() {
   return (
     <section className="py-24 lg:py-40 bg-white selection:bg-brand-gray overflow-hidden relative">
       {/* Background Architectural Accent */}
-      <div className="absolute left-0 top-0 w-1/4 h-full bg-brand-gray/30 -z-0" />
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Editorial Header */}

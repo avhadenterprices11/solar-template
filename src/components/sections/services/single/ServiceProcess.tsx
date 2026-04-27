@@ -39,7 +39,7 @@ export function ServiceProcess({ heading, steps }: ServiceProcessProps) {
                        <h4 className="text-2xl font-black text-brand-navy italic tracking-tighter leading-tight group-hover:text-brand-green transition-colors duration-500">
                           {step}
                        </h4>
-                       <p className="text-xs font-black text-slate-300 uppercase tracking-widest">Phase 0{index + 1} Implementation</p>
+
                     </div>
                  </div>
               </div>
