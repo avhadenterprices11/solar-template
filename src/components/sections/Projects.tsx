@@ -38,7 +38,7 @@ const projectCategories = [
 
 export function Projects() {
   return (
-    <section className="relative py-6 md:py-8 bg-[#F8F9FA] selection:bg-brand-green/20 overflow-hidden">
+    <section className="relative py-6 md:py-8 bg-white selection:bg-brand-green/20 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
         <div className="absolute -top-24 -right-24 w-[500px] h-[500px] bg-brand-green/5 rounded-full blur-[120px]" />

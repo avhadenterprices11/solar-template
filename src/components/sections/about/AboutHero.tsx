@@ -13,7 +13,7 @@ export function AboutHero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-brand-navy/70 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10 text-center lg:text-left pt-40 md:pt-48">

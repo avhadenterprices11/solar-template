@@ -13,7 +13,7 @@ export function ServiceIndustries({ heading, points }: ServiceIndustriesProps) {
     <section className="py-32 bg-white relative overflow-hidden">
       {/* Decorative Background Text */}
       <div className="absolute left-0 bottom-0 pointer-events-none select-none opacity-[0.02] transform translate-y-1/4">
-        <span className="text-[25rem] font-black text-brand-navy leading-none tracking-tighter">SECTORS</span>
+        <span className="text-[25rem] font-black text-brand-navy leading-none tracking-tighter"></span>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

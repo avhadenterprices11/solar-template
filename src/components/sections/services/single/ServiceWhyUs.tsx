@@ -13,7 +13,6 @@ export function ServiceWhyUs({ heading, points }: ServiceWhyUsProps) {
         <div className="bg-brand-navy rounded-[4rem] p-12 md:p-32 overflow-hidden relative">
           {/* Architectural Background */}
           <div className="absolute top-0 right-0 p-24 text-white/[0.02] font-black text-[20rem] pointer-events-none select-none leading-none tracking-tighter">
-             G&D
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 relative z-10">

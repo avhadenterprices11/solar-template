@@ -64,13 +64,10 @@ export function ProjectExplorer() {
               </div>
 
               {/* Card Header - Floating Badges */}
-              <div className="relative z-10 p-10 flex justify-between items-start">
+              <div className="relative z-10 p-10 flex justify-between items-start gap-4">
                  <div className="flex flex-col gap-2">
                     <span className="px-4 py-2 bg-brand-green/90 backdrop-blur-md rounded-full text-[10px] font-black uppercase tracking-widest text-brand-navy shadow-xl shadow-black/20">
                       {project.type}
-                    </span>
-                    <span className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest text-white/60">
-                      Phase 0{index + 1}
                     </span>
                  </div>
                  <div className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl flex items-center justify-center text-white group-hover:bg-brand-green group-hover:text-brand-navy transition-all duration-500 shadow-xl group-hover:rotate-12">

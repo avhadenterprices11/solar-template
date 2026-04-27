@@ -11,7 +11,7 @@ export function ServicesWhy() {
   ];
 
   return (
-    <section className="py-24 bg-brand-gray dark:bg-slate-900/50 overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="bg-slate-900 rounded-[4rem] p-12 md:p-24 overflow-hidden relative">
           {/* Background Decorative Accent */}

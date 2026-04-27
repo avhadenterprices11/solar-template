@@ -14,10 +14,10 @@ export function ServicesHero() {
           priority
         />
         <div className="absolute inset-0 bg-slate-900/60 transition-opacity" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 pt-40 md:pt-48">
         <div className="max-w-4xl space-y-6">
           <h1 className="text-4xl md:text-7xl font-black text-white leading-[1.1] animate-in fade-in slide-in-from-top-4 duration-700">
             Comprehensive <br/>

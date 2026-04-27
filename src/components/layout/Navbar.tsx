@@ -73,7 +73,7 @@ export function Navbar() {
                 "text-xs uppercase tracking-widest font-black transition-all duration-300 px-4 py-2 rounded-full",
                 isScrolled 
                   ? "text-brand-gray0 dark:text-slate-400 hover:text-brand-navy dark:hover:text-white hover:bg-white dark:hover:bg-slate-900 shadow-sm shadow-transparent hover:shadow-black/5" 
-                  : (isHomePage ? "text-white/90 hover:text-brand-green" : "text-brand-navy hover:text-brand-green")
+                  : "text-white/90 hover:text-brand-green"
               )}
             >
               {link.name}
@@ -88,7 +88,7 @@ export function Navbar() {
             className={cn(
               "inline-flex items-center gap-2 font-black uppercase tracking-widest transition-all duration-500 group",
               isScrolled 
-                ? "bg-brand-green text-brand-navy px-4 py-2 rounded-full text-[10px]" 
+                ? "bg-brand-navy text-white px-4 py-2 rounded-full text-[10px]" 
                 : "bg-brand-navy dark:bg-brand-green text-white dark:text-brand-navy px-6 py-3 rounded-2xl text-xs hover:gap-3 shadow-xl"
             )}
           >
