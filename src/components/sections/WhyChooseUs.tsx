@@ -26,7 +26,7 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-24 bg-brand-gray dark:bg-slate-900 overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Content Side */}

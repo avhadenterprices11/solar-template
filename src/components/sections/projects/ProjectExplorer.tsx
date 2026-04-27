@@ -20,7 +20,7 @@ export function ProjectExplorer() {
   ];
 
   return (
-    <section className="py-24 bg-brand-gray dark:bg-slate-900/50">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
         {/* Filter Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-20">

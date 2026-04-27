@@ -36,7 +36,7 @@ export function WhoWeAre() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-sm font-bold text-brand-green uppercase tracking-[0.2em]">The Identity</h2>
-              <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight underline decoration-brand-green/30 underline-offset-8">
+              <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tightdecoration-brand-green/30 underline-offset-8">
                 Who We Are
               </h3>
             </div>
