@@ -101,7 +101,7 @@ export function Navbar() {
         <button
           className={cn(
             "md:hidden transition-colors rounded-full p-2",
-            isScrolled ? "bg-brand-gray dark:bg-slate-800 text-slate-900 dark:text-white" : "text-slate-900 dark:text-white"
+            isScrolled ? "bg-brand-gray dark:bg-slate-800 text-slate-900 dark:text-white" : "text-white"
           )}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
