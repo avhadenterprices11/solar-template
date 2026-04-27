@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import * as Icons from "lucide-react";
 import { Offering } from "@/data/services";
@@ -12,7 +12,7 @@ interface ServiceScopeProps {
   items: Offering[];
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -23,7 +23,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
