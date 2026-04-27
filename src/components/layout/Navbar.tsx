@@ -32,8 +32,8 @@ export function Navbar() {
   return (
     <header 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out flex justify-center px-4",
-        isScrolled ? "pt-4" : isHomePage ? "pt-0 bg-gradient-to-b from-black/60 to-transparent" : "pt-0"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out flex justify-center px-4 md:px-8",
+        isScrolled ? "pt-2 md:pt-4" : "pt-0 bg-gradient-to-b from-black/60 to-transparent"
       )}
     >
       <div
@@ -41,14 +41,14 @@ export function Navbar() {
           "w-full transition-all duration-500 ease-out flex items-center justify-between px-6 py-4",
           isScrolled 
             ? "max-w-4xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/50 dark:border-slate-800/50 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)]" 
-            : "max-w-7xl bg-transparent py-10 border-transparent rounded-none"
+            : "max-w-[1600px] bg-transparent py-6 md:py-10 border-transparent rounded-none"
         )}
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <div className={cn(
             "relative transition-all duration-500 group-hover:scale-105",
-            isScrolled ? "w-44 h-12" : "w-64 h-20"
+            isScrolled ? "w-16 h-10 md:w-30 md:h-12" : "w-20 h-12 md:w-44 md:h-20"
           )}>
             <Image
               src="/images/G&D Brothers Logo.png"
@@ -112,13 +112,13 @@ export function Navbar() {
       {/* Mobile Navigation Drawer */}
       <div 
         className={cn(
-          "md:hidden fixed inset-0 z-40 bg-white dark:bg-brand-navy transition-all duration-500 ease-in-out px-6",
+          "md:hidden fixed inset-0 z-40 bg-white dark:bg-brand-navy transition-all duration-500 ease-in-out px-6 overflow-y-auto",
           mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
         )}
       >
         {/* Drawer Header */}
-        <div className="flex items-center justify-between py-8">
-          <div className="relative w-32 h-10">
+        <div className="flex items-center justify-between py-6">
+          <div className="relative w-28 h-8">
             <Image
               src="/images/G&D Brothers Logo.png"
               alt="G&D Brothers Logo"
