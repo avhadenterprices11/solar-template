@@ -20,13 +20,19 @@ export function WhoWeAre() {
                 />
               </div>
               <div className="grid grid-cols-2 gap-6">
-                <div className="p-8 bg-slate-900 rounded-3xl space-y-2">
-                  <p className="text-3xl font-black text-brand-green">33kV</p>
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Industry Specialization</p>
+                <div className="relative p-8 bg-slate-900 rounded-3xl space-y-2 overflow-hidden group/card cursor-pointer">
+                  <Zap className="absolute -bottom-4 -right-4 w-24 h-24 text-brand-green/10 group-hover/card:scale-110 transition-transform duration-500" />
+                  <div className="relative z-10 space-y-2">
+                    <p className="text-3xl font-black text-brand-green">33kV</p>
+                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Industry Specialization</p>
+                  </div>
                 </div>
-                <div className="p-8 bg-brand-green rounded-3xl space-y-2">
-                  <p className="text-3xl font-black text-brand-navy">EPC</p>
-                  <p className="text-[10px] font-bold text-brand-navy/60 uppercase tracking-widest">Full-Cycle Delivery</p>
+                <div className="relative p-8 bg-brand-green rounded-3xl space-y-2 overflow-hidden group/card cursor-pointer">
+                  <Settings className="absolute -bottom-4 -right-4 w-24 h-24 text-brand-navy/10 group-hover/card:scale-110 group-hover/card:rotate-90 transition-transform duration-700" />
+                  <div className="relative z-10 space-y-2">
+                    <p className="text-3xl font-black text-brand-navy">EPC</p>
+                    <p className="text-[10px] font-bold text-brand-navy/60 uppercase tracking-widest">Full-Cycle Delivery</p>
+                  </div>
                 </div>
               </div>
             </div>
